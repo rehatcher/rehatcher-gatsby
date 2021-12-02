@@ -1,22 +1,19 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link as LinkR } from "react-router-dom"
+import { Link as LinkS } from "react-scroll"
 
 export const Nav = styled.nav`
-  background: ${({ active }) =>
-    active
-      ? "#fff"
-      : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%)"};
-  height: 80px;
+  background: #fff;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 
   @media screen and (max-width: 960px) {
-    background: ${({ click }) => (click ? "#fff" : "transparent")};
     transition: 0.8s all ease;
   }
 `
@@ -24,26 +21,29 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
+  padding: 0 24px;
+  max-width: 1100px;
 `
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(LinkR)`
   color: #141414;
-  justify-self; flex-start;
+  justify-self: flex-start;
   cursor: pointer;
-  text-decoration: none;
   font-size: 1.5rem;
-  display: flex; 
+  display: flex;
   align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
 `
 
 export const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
@@ -59,37 +59,30 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
 
-  @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: ${({ click }) => (click ? "100%" : "-1000px")};
-    opacity: 1;
-    transition: all 0.2s ease;
-    background: #fff;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `
 
 export const NavItem = styled.li`
   height: 80px;
-
-  @media screen and (max-width: 960px) {
-    width: 100%;
-  }
 `
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(LinkS)`
   color: #141414;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 100%;
-  font-family: "Raleway", sans-serif;
 
-  @media screen and (max-width: 960px) {
+  cursor: pointer;
+
+  &:active {
+    border-bottom: 3px solid #01bf71;
+  }
+
+  @media screen and (max-width: 768px) {
     text-align: center;
     padding: 2rem;
     width: 100%;

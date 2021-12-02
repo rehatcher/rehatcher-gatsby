@@ -1,11 +1,15 @@
-import * as React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { BrowserRouter as Router } from "react-router-dom"
 import "./layout.css"
-
 import "../styles/global.css"
 import Navbar from "./Navbar"
+import Sidebar from "./Sidebar"
+import HeroSection from "./HeroSection"
+import Services from "./Services"
+import Contact from "./Contact"
+import About from "./About"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,12 +22,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
-      
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-        <Navbar /> 
-        <main>{children}</main>
+      <Router>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
+        <HeroSection />
+        <About />
+        <Services />
+        <Contact />
+        {/* <main>{children}</main> */}
+      </Router>
     </>
   )
 }
