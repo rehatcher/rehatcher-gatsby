@@ -1,8 +1,18 @@
 import React from "react"
-import "./HeroSection.css"
+import styled from "styled-components"
+// import "./HeroSection.css"
+import { HeroContainer, HeroImg } from "./HeroElements"
+import LogoSrc from "../../images/rhc-logo.png"
 
 function HeroSection() {
-  return <div className="hero-container" id="home"/>
+  return (
+    <HeroContainer id="home">
+      <HeroImg src={LogoSrc}/>
+    </HeroContainer>
+    // <div className="hero-container" id="home">
+    //   <div className="hero-content"></div>
+    // </div>
+  )
 }
 
 export default HeroSection

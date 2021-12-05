@@ -3,15 +3,15 @@ import { Link as LinkR } from "react-router-dom"
 import { Link as LinkS } from "react-scroll"
 
 export const Nav = styled.nav`
-  background: #fff;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -19,6 +19,7 @@ export const Nav = styled.nav`
 `
 
 export const NavbarContainer = styled.div`
+  position:absolute;
   display: flex;
   justify-content: space-between;
   height: 60px;
@@ -69,7 +70,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkS)`
-  color: #141414;
+  color: #F5862E;
   display: flex;
   align-items: center;
   text-decoration: none;

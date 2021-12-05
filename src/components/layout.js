@@ -10,6 +10,7 @@ import HeroSection from "./HeroSection"
 import Services from "./Services"
 import Contact from "./Contact"
 import About from "./About"
+import Client from "./Client"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
         <HeroSection />
         <About />
         <Services />
+        <Client />
         <Contact />
         {/* <main>{children}</main> */}
       </Router>
