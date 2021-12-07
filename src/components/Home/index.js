@@ -1,8 +1,8 @@
 import React from "react"
-import { HeroContainer, HeroImg } from "./HeroElements"
+import { HeroContainer, HeroImg } from "./HomeElements"
 import LogoSrc from "../../images/rhc-logo.png"
 
-function HeroSection() {
+function Home() {
   return (
     <HeroContainer id="home">
       <HeroImg src={LogoSrc}/>
@@ -10,4 +10,4 @@ function HeroSection() {
   )
 }
 
-export default HeroSection
+export default Home

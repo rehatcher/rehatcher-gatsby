@@ -12,6 +12,7 @@ import {
 } from "./NavbarElements"
 
 const Navbar = ({ toggle }) => {
+  const [click, setClick] = useState(false)
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {

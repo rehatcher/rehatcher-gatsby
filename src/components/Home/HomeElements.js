@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const HeroContainer = styled.div`
+export const HomeContainer = styled.div`
   background: #ffffff;
   height: 960px;
   width: 100%;
@@ -9,4 +9,4 @@ export const HeroContainer = styled.div`
   top: 60px;
 `
 
-export const HeroImg = styled.img``
+export const HomeImg = styled.img``
