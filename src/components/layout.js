@@ -3,10 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { BrowserRouter as Router } from "react-router-dom"
 import "./layout.css"
-import "../styles/global.css"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
-import HeroSection from "./HeroSection"
+import Home from "./Home"
 import Services from "./Services"
 import Contact from "./Contact"
 import About from "./About"
@@ -33,9 +32,10 @@ const Layout = ({ children }) => {
     <>
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Router>
-        <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} />
-        <HeroSection />
+        {/* <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} /> */}
+        <Navbar />
+        <Home />
         <About />
         <Services />
         <Client />

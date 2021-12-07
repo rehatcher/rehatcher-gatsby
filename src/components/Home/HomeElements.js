@@ -9,4 +9,12 @@ export const HomeContainer = styled.div`
   top: 60px;
 `
 
-export const HomeImg = styled.img``
+export const HomeContent = styled.div`
+  position: absolute;
+  height: 960px;
+  width: 100%;
+`
+export const HomeImg = styled.img`
+width: 50%;
+height: 960px;
+`

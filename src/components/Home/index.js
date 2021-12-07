@@ -1,12 +1,13 @@
 import React from "react"
-import { HeroContainer, HeroImg } from "./HomeElements"
-import LogoSrc from "../../images/rhc-logo.png"
-
+import { HomeContainer, HomeContent, HomeImg } from "./HomeElements"
+import HomeBanner from "../../images/home-banner.png"
 function Home() {
   return (
-    <HeroContainer id="home">
-      <HeroImg src={LogoSrc}/>
-    </HeroContainer>
+    <HomeContainer id="home">
+      <HomeContent>
+        <HomeImg src={HomeBanner} />
+      </HomeContent>
+    </HomeContainer>
   )
 }
 
