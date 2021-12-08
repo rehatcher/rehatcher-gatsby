@@ -1,22 +1,30 @@
 import styled from "styled-components"
 
 export const AboutContainer = styled.div`
-  position: absolute;
-  background: #ffffff;
+  height: 800px;
   display: flex;
-  width: 100%;
-  left: 0px;
-  top: 1020px;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffffff;
+
+  @media screen and (max-width: 768px) {
+    height: 1100px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 1300px;
+  }
 `
 
 export const AboutGrid = styled.div`
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  grid-gap: 1rem;
-  margin: 100px;
+  grid-gap: 16px;
+  padding: 0 50px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `
@@ -26,24 +34,13 @@ export const AboutContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-`
-
-export const AboutD1 = styled.div`
-  position: absolute;
-  width: 50vw;
-`
-
-export const AboutD2 = styled.div`
-  width: 50vw;
+  padding: 30px;
 `
 
 export const AboutH1 = styled.h1`
   font-size: 24px;
-  color: #000000;
-  width: 686px;
-  height: 36px;
-  top: 180px;
-  position: absolute;
+  font-style: normal;
+  font-weight: normal;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -51,14 +48,17 @@ export const AboutH1 = styled.h1`
 `
 
 export const AboutP = styled.p`
-  position: absolute;
-  width: 686px;
-  height: 180px;
-  top: 240px;
+  padding: 24px 0;
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: -0.015em;
 `
 
 export const AboutImg = styled.img`
-  width: 50vw;
+  width: 840px;
+  margin-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+  }
 `

@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Link as LinkS } from "react-scroll"
-import { Logo } from "../../images/nav-logo.png"
 
 export const Nav = styled.nav`
   background: rgba(255, 255, 255, 0.5);
@@ -41,7 +40,7 @@ export const NavLogo = styled(Link)`
 `
 
 export const NavImg = styled.img`
-  height: 60px;
+  height: 40px;
 `
 
 export const MobileIcon = styled.div`

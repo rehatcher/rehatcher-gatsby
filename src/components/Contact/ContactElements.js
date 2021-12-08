@@ -1,31 +1,55 @@
 import styled from "styled-components"
 
 export const ContactContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 2958px;
-  color: #F5F5F5;
-  display:flex;
+  height: 800px;
+  display: flex;
   justify-content: center;
-  align-items; center;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+
+  @media screen and (max-width: 768px) {
+    height: 1100px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 1300px;
+  }
 `
 
-export const ContactH3 = styled.h3`
-  position: absolute;
-  width: 686px;
-  height: 36px;
-  left: 80px;
-  top: 150px;
+export const ContactGrid = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+`
+
+export const ContactContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+`
+
+export const ContactH1 = styled.h1`
+  font-size: 24px;
   color: #f5862e;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
 `
 
 export const ContactP1 = styled.p`
-  position: absolute;
-  width: 324px;
-  height: 240px;
-  left: 80px;
-  top: 210px;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: -0.015em;
@@ -33,34 +57,9 @@ export const ContactP1 = styled.p`
 `
 
 export const ContactP2 = styled.p`
-  position: absolute;
-  width: 238px;
-  height: 126px;
-  left: 529px;
-  top: 210px;
+  margin-bottom: 118px;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
-`
-export const ContactContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h3 {
-    width: 686px;
-    height: 36px;
-    left: 80px;
-    top: 150px;
-    color: #f5862e;
-  }
-
-  p {
-    width: 324px;
-    height: 240px;
-    left: 80px;
-    top: 210px;
-    color: rgba(0, 0, 0, 0.8);
-  }
 `

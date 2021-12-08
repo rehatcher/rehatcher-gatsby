@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import "./layout.css"
 import Header from "./header"
 import Navbar from "./Navbar"
-import Home from "./Home"
+import HomeSection from "./Home"
 import Services from "./Services"
 import Contact from "./Contact"
 import About from "./About"
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Router>
         <Navbar />
-        <Home />
+        <HomeSection />
         <About />
         <Services />
         <Client />
