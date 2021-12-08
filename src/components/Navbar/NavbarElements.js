@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Link as LinkS } from "react-scroll"
+import { Logo } from "../../images/nav-logo.png"
 
 export const Nav = styled.nav`
+  background: rgba(255, 255, 255, 0.5);
   height: 60px;
   display: flex;
   justify-content: center;
@@ -12,9 +14,10 @@ export const Nav = styled.nav`
   top: 0;
   width: 100%;
   z-index: 999;
+  font-size: 1rem;
 
   @media screen and (max-width: 960px) {
-      transition: 0.8s all ease;
+    transition: 0.8s all ease;
   }
 `
 
@@ -34,19 +37,25 @@ export const NavLogo = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
 `
 
+export const NavImg = styled.img`
+  height: 60px;
+`
 
 export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      cursor: pointer;
+    color: #f5862e;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    cursor: pointer;
+    font-size: 1.5rem;
   }
 `
 export const NavMenu = styled.ul`
@@ -56,26 +65,34 @@ export const NavMenu = styled.ul`
   text-align: center;
 
   @media screen and (max-width: 960px) {
-    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: ${({ click }) => (click ? "100%" : "-1000px")};
+    transition: all 0.2s ease;
   }
 `
 
 export const NavItem = styled.li`
   height: 60px;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 export const NavLinks = styled(LinkS)`
-  color: #F5862E;
+  color: #f5862e;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   height: 100%;
 
-  cursor: pointer;
-
   &:active {
-    border-bottom: 3px solid #F5862E;
+    border-bottom: 3px solid #f5862e;
   }
 
   @media screen and (max-width: 960px) {

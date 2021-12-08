@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const ContactContainer = styled.div`
   position: absolute;
   width: 100%;
-  height: 600px;
   left: 0px;
   top: 2958px;
   color: #F5F5F5;
@@ -27,6 +26,9 @@ export const ContactP1 = styled.p`
   height: 240px;
   left: 80px;
   top: 210px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
 `
 
@@ -36,7 +38,9 @@ export const ContactP2 = styled.p`
   height: 126px;
   left: 529px;
   top: 210px;
-
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
 `
 export const ContactContent = styled.div`

@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const ClientContainer = styled.div`
   position: absolute;
   width: 100%;
-  height: 600px;
   left: 0px;
   top: 2220px;
   background: #ffffff;

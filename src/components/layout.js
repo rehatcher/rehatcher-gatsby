@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { BrowserRouter as Router } from "react-router-dom"
 import "./layout.css"
+import Header from "./header"
 import Navbar from "./Navbar"
-import Sidebar from "./Sidebar"
 import Home from "./Home"
 import Services from "./Services"
 import Contact from "./Contact"
@@ -22,18 +22,10 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
-
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Router>
-        {/* <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} /> */}
         <Navbar />
         <Home />
         <About />

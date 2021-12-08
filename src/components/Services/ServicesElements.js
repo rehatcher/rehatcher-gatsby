@@ -3,10 +3,9 @@ import styled from "styled-components"
 export const ServicesContainer = styled.div`
   position: absolute;
   width: 100%;
-  height: 600px;
   left: 0px;
   top: 1620px;
-  background: #FFFFFF;
+  background: #ffffff;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -40,15 +39,13 @@ export const ServicesCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 10px;
   height: 340px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
 
   &:hover {
-      transform: scale(1.02);
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 `
 
@@ -64,9 +61,10 @@ export const ServicesH1 = styled.h1`
   height: 72px;
   align-items: center;
   text-align: center;
-  left: 80px;
-  top: 97px;
-
+  font-size: 72px;
+  font-style: normal;
+  font-weight: normal;
+  
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -78,5 +76,5 @@ export const ServicesH2 = styled.h2`
 `
 export const ServicesP = styled.p`
   font-size: 1rem;
-  text-align: center;
+  padding-left: 20px;
 `

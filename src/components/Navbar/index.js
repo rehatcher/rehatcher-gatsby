@@ -9,7 +9,9 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavImg
 } from "./NavbarElements"
+import Logo from "../../images/nav-logo.png"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -27,19 +29,21 @@ const Navbar = () => {
 
   useEffect(() => {
     changeNav()
-
     window.addEventListener("scroll", changeNav)
   }, [])
+
   return (
     <>
-      <Nav active={scroll} click={click}>
+      <Nav active={scrollNav} click={click}>
         <NavbarContainer>
-          <NavLogo to="/">REHATCHER</NavLogo>
+          <NavLogo to="/">
+            <NavImg src={Logo}/>
+          </NavLogo>
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </MobileIcon>
 
-          <NavMenu>
+          <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks
                 to="home"
@@ -108,7 +112,6 @@ const Navbar = () => {
 }
 
 export default Navbar
-
 
 // const Navbar = ({ toggle }) => {
 //   const [click, setClick] = useState(false)
