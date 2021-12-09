@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <Nav active={scrollNav} click={click}>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo to="home">
             <NavImg src={Logo}/>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
