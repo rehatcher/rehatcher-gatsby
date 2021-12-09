@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Link as LinkS } from "react-scroll"
 
 export const Nav = styled.nav`
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   height: 60px;
   display: flex;
   justify-content: center;
@@ -81,6 +81,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 60px;
+  cursor: pointer;
 
   @media screen and (max-width: 960px) {
     width: 100%;

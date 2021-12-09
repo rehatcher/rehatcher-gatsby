@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const HomeContainer = styled.div`
-  height: 800px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -9,14 +8,6 @@ export const HomeContainer = styled.div`
   position: relative;
   z-index: 1;
   padding: 50px;
-
-  @media screen and (max-width: 768px) {
-    height: 800px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 800px;
-  }
 `
 
 export const HomeGrid = styled.div`
@@ -59,6 +50,7 @@ export const HomeButton = styled.button`
   outline: none;
   border: none;
   margin-top: 20px;
+  font-size: 20px;
 
   @media screen and (max-width: 768px) {
     width: 80px;

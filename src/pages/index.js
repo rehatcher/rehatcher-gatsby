@@ -5,6 +5,7 @@ import Contact from "../components/Contact"
 import Home from "../components/Home"
 import Navbar from "../components/Navbar"
 import Services from "../components/Services"
+import "../components/styles.css"
 
 function HomePage() {
   return (
