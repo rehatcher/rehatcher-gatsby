@@ -47,7 +47,7 @@ const Navbar = () => {
               <NavLinks
                 to="home"
                 smooth={true}
-                duration={500}
+                duration={800}
                 spy={true}
                 exact="true"
                 offset={-80}
@@ -59,7 +59,7 @@ const Navbar = () => {
               <NavLinks
                 to="about"
                 smooth={true}
-                duration={500}
+                duration={800}
                 spy={true}
                 exact="true"
                 offset={-80}
@@ -71,7 +71,7 @@ const Navbar = () => {
               <NavLinks
                 to="service"
                 smooth={true}
-                duration={500}
+                duration={800}
                 spy={true}
                 exact="true"
                 offset={-80}
@@ -83,7 +83,7 @@ const Navbar = () => {
               <NavLinks
                 to="client"
                 smooth={true}
-                duration={500}
+                duration={800}
                 spy={true}
                 exact="true"
                 offset={-80}
@@ -95,7 +95,7 @@ const Navbar = () => {
               <NavLinks
                 to="contact"
                 smooth={true}
-                duration={500}
+                duration={800}
                 spy={true}
                 exact="true"
                 offset={-80}

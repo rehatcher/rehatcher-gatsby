@@ -17,7 +17,7 @@ const About = () => {
           <AboutImg src={aboutImg} />
         </AboutContent>
         <AboutContent>
-          <AboutH1>ABOUT US</AboutH1>
+          <AboutH1>About Us</AboutH1>
           <AboutP>
             We are experts in digital business transformation and system design.
             We can provide advice and analyze the current work process in order

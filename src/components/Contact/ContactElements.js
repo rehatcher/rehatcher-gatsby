@@ -30,11 +30,12 @@ export const ContactH1 = styled.h1`
   font-size: 24px;
   color: #f5862e;
   font-style: normal;
-  font-weight: normal;
-  padding-left: 50px;
+  font-weight: bold;
+  padding: 0 50px;
+  margin-bottom: 24px;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 24px;
   }
 `
 

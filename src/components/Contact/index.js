@@ -14,7 +14,7 @@ import qr from "../../images/qr-web.png"
 function Contact() {
   return (
     <ContactContainer id="contact">
-      <ContactH1>CONTACT US</ContactH1>
+      <ContactH1>Contact Us</ContactH1>
       <ContactGrid>
         <ContactContent>
           <ContactP1>

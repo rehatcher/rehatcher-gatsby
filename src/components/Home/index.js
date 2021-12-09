@@ -15,7 +15,14 @@ function Home() {
       <HomeGrid>
         <HomeContent>
           <HomeH1>Let us rebirth your company in the digital age.</HomeH1>
-          <HomeButton to="contact">
+          <HomeButton
+            to="contact"
+            smooth={true}
+            duration={800}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
             Contact Us
           </HomeButton>
         </HomeContent>
