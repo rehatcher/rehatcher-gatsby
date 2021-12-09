@@ -5,7 +5,6 @@ export const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #ffffff;
   position: relative;
   z-index: 1;
   padding: 50px;

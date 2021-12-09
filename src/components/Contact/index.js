@@ -6,14 +6,17 @@ import {
   ContactH1,
   ContactP1,
   ContactP2,
+  ContactImg,
 } from "./ContactElements"
+import { RiFacebookBoxFill, RiPhoneFill, RiMailSendFill } from "react-icons/ri"
+import qr from "../../images/qr-web.png"
 
 function Contact() {
   return (
     <ContactContainer id="contact">
+      <ContactH1>CONTACT US</ContactH1>
       <ContactGrid>
         <ContactContent>
-          <ContactH1>CONTACT US</ContactH1>
           <ContactP1>
             Rehatcher Co., Ltd.
             <br />
@@ -34,11 +37,21 @@ function Contact() {
         </ContactContent>
         <ContactContent>
           <ContactP2>
+            <RiMailSendFill style={{ "margin-right": "10px" }} />
             Email: info@rehatcher.com <br />
+            <RiPhoneFill style={{ "margin-right": "10px" }} />
             Phone: +669 6964 4154 <br />
+            <RiFacebookBoxFill style={{ "margin-right": "10px" }} />
             Facebook: REHATCHER <br />
             {/* Line: @rehatcher_th */}
           </ContactP2>
+        </ContactContent>
+        <ContactContent
+          style={{
+            "align-items": "center",
+          }}
+        >
+          <ContactImg src={qr} />
         </ContactContent>
       </ContactGrid>
     </ContactContainer>

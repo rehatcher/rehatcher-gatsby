@@ -4,7 +4,6 @@ export const ServicesContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #ffffff;
   padding: 50px;
 `
 
@@ -25,7 +24,7 @@ export const ServicesCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -52,5 +51,4 @@ export const ServicesH2 = styled.h2`
 `
 export const ServicesP = styled.p`
   font-size: 1rem;
-  padding-left: 20px;
 `

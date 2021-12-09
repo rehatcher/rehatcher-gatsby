@@ -5,7 +5,6 @@ export const ClientContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: #ffffff;
   padding: 50px;
 `
 
@@ -28,11 +27,11 @@ export const ClientGrid = styled.div`
 `
 
 export const ClientH1 = styled.h1`
-  margin-bottom: 64px;
   font-size: 48px;
   font-style: normal;
   font-weight: normal;
-
+  padding: 50px;
+  
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
