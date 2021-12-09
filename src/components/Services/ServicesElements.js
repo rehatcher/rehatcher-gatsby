@@ -25,7 +25,6 @@ export const ServicesCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-height: 340px;
   padding: 30px;
   transition: all 0.2s ease-in-out;
 
@@ -37,7 +36,6 @@ export const ServicesCard = styled.div`
 `
 
 export const ServicesH1 = styled.h1`
-  margin-bottom: 64px;
   font-size: 48px;
   font-style: normal;
   font-weight: normal;

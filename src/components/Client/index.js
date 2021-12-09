@@ -16,19 +16,14 @@ function Client() {
       <ClientH1>Our Clients</ClientH1>
       <ClientGrid>
         <ClientContent>
-          <ClientImg src={dastaLogo}/>
+          <ClientImg src={dastaLogo} style={{height: "50px"}}/>
         </ClientContent>
         <ClientContent>
           <ClientImg src={colpalLogo}/>
         </ClientContent>
         <ClientContent>
-          <ClientImg src={cysecLogo}/>
+          <ClientImg src={cysecLogo} style={{height: "80px"}}/>
         </ClientContent>
-        <ClientContent></ClientContent>
-        <ClientContent></ClientContent>
-        <ClientContent></ClientContent>
-        <ClientContent></ClientContent>
-        <ClientContent></ClientContent>
       </ClientGrid>
     </ClientContainer>
   )

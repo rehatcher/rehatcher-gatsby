@@ -15,7 +15,9 @@ function Home() {
       <HomeGrid>
         <HomeContent>
           <HomeH1>Let us rebirth your company in the digital age.</HomeH1>
-          <HomeButton>Contact Us</HomeButton>
+          <HomeButton to="contact">
+            Contact Us
+          </HomeButton>
         </HomeContent>
         <HomeContent>
           <HomeImg src={HomeBanner} />

@@ -6,12 +6,13 @@ export const ClientContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: #ffffff;
+  padding: 50px;
 `
 
 export const ClientGrid = styled.div`
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;
@@ -42,10 +43,9 @@ export const ClientContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-height: 340px;
   padding: 30px;
 `
 
 export const ClientImg = styled.img`
-  width: 200px;
+  height: 100px;
 `
