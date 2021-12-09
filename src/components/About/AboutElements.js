@@ -55,8 +55,7 @@ export const AboutP = styled.p`
 `
 
 export const AboutImg = styled.img`
-  width: 840px;
-  margin-left: 20px;
+  width: 50vw;
 
   @media screen and (max-width: 768px) {
     width: 100vw;
