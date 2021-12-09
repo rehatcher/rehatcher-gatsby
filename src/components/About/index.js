@@ -7,7 +7,7 @@ import {
   AboutP,
   AboutImg,
 } from "./AboutElements"
-import aboutImg from '../../images/coding-man.jpg'
+import aboutImg from '../../images/about-logo.gif'
 
 const About = () => {
   return (

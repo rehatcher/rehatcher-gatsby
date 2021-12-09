@@ -6,6 +6,7 @@ export const AboutContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   background: #ffffff;
+  padding: 50px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -22,7 +23,6 @@ export const AboutGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -33,8 +33,7 @@ export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  padding: 30px;
+  padding: 50px;
 `
 
 export const AboutH1 = styled.h1`
@@ -55,9 +54,9 @@ export const AboutP = styled.p`
 `
 
 export const AboutImg = styled.img`
-  width: 50vw;
+  width: 100%;
 
   @media screen and (max-width: 768px) {
-    width: 100vw;
+    width: 100%;
   }
 `

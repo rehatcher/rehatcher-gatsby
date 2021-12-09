@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { animateScroll as scroll } from "react-scroll"
 import {
   Nav,
   NavbarContainer,
@@ -36,8 +35,8 @@ const Navbar = () => {
     <>
       <Nav active={scrollNav} click={click}>
         <NavbarContainer>
-          <NavLogo to="home">
-            <NavImg src={Logo}/>
+          <NavLogo to="/">
+            <NavImg src={Logo} />
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}

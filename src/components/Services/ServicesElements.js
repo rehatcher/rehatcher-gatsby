@@ -4,9 +4,9 @@ export const ServicesContainer = styled.div`
   height: 800px;
   display: flex;
   justify-content: center;
-  align-items: left;
   flex-direction: column;
   background: #ffffff;
+  padding: 50px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -23,11 +23,9 @@ export const ServicesWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
   }
 `
 
@@ -52,7 +50,7 @@ export const ServicesH1 = styled.h1`
   font-size: 48px;
   font-style: normal;
   font-weight: normal;
-  padding-left: 100px;
+  padding: 50px;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;

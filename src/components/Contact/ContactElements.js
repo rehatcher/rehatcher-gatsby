@@ -7,6 +7,7 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: #f5f5f5;
+  padding: 50px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -23,11 +24,9 @@ export const ContactGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
   }
 `
 
@@ -35,7 +34,7 @@ export const ContactContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 30px;
+  padding: 50px;
 `
 
 export const ContactH1 = styled.h1`

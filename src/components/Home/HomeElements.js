@@ -8,13 +8,14 @@ export const HomeContainer = styled.div`
   background: #ffffff;
   position: relative;
   z-index: 1;
+  padding: 50px;
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
+    height: 800px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: 800px;
   }
 `
 
@@ -24,7 +25,6 @@ export const HomeGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -36,14 +36,13 @@ export const HomeContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
 `
 
 export const HomeH1 = styled.h1`
   font-size: 56px;
   font-style: normal;
   font-weight: normal;
-  margin-left: 20px;
   
   @media screen and (max-width: 768px) {
     font-size: 28px;
@@ -69,9 +68,10 @@ export const HomeButton = styled.button`
 `
 
 export const HomeImg = styled.img`
-  width: 840px;
+  width: 100%;
+  height: 100%;
 
   @media screen and (max-width: 768px) {
-    width: 100vw;
+    width: 100%;
   }
 `
