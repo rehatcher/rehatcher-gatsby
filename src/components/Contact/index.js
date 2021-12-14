@@ -9,7 +9,6 @@ import {
   ContactImg,
 } from "./ContactElements"
 import { RiFacebookBoxFill, RiPhoneFill, RiMailSendFill } from "react-icons/ri"
-import qr from "../../images/qr-web.png"
 
 function Contact() {
   return (
@@ -42,16 +41,9 @@ function Contact() {
             <RiPhoneFill style={{ "margin-right": "10px" }} />
             Phone: +669 6964 4154 <br />
             <RiFacebookBoxFill style={{ "margin-right": "10px" }} />
-            Facebook: REHATCHER <br />
+            Facebook: Rehatcher <br />
             {/* Line: @rehatcher_th */}
           </ContactP2>
-        </ContactContent>
-        <ContactContent
-          style={{
-            "align-items": "center",
-          }}
-        >
-          <ContactImg src={qr} />
         </ContactContent>
       </ContactGrid>
     </ContactContainer>
