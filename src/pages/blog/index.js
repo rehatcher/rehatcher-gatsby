@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Navbar from "../../components/Navbar"
 
 export default function IndexPage({
   data, // this prop will be injected by the GraphQL query below.
@@ -18,9 +19,12 @@ export default function IndexPage({
   })
 
   return (
-    <div className="blog-post-container">
-      <ul>{all}</ul>
-    </div>
+    <>
+      <Navbar />
+      <div className="blog-post-container">
+        <ul>{all}</ul>
+      </div>
+    </>
   )
 }
 

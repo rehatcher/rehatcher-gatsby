@@ -8,7 +8,6 @@ export const ServicesContainer = styled.div`
 `
 
 export const ServicesWrapper = styled.div`
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -28,7 +27,7 @@ export const ServicesCard = styled.div`
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    // cursor: pointer;
   }
 `
 
@@ -50,6 +49,16 @@ export const ServicesH2 = styled.h2`
   margin-bottom: 24px;
 `
 export const ServicesP = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+
+  letter-spacing: -0.015em;
+`
+
+export const ServicesList = styled.ul`
+  list-style-position: inside;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

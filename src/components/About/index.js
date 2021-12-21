@@ -7,7 +7,7 @@ import {
   AboutP,
   AboutImg,
 } from "./AboutElements"
-import aboutImg from '../../images/about-logo.gif'
+import aboutImg from "../../images/about-logo.gif"
 
 const About = () => {
   return (
@@ -19,13 +19,12 @@ const About = () => {
         <AboutContent>
           <AboutH1>About Us</AboutH1>
           <AboutP>
-            We are experts in digital business transformation and system design.
-            We can provide advice and analyze the current work process in order
-            to design data structures and related parts that will allow us to
-            bring information (Data) to use for maximum benefit (Insight) in
-            terms of service, marketing, customer relations, and other tasks,
-            including training employees with a team with over 20 years of
-            experience.
+            Businesses are competing with other players, but now the competition
+            involves players from different domains. Technology makes the world
+            smaller, and staying still is stepping backward. <i>Your business
+            needs to be digitised.</i> Digitisation is not about being trendy with
+            tech but helps cut costs, ignore geolocation limits, and reach more
+            customers. Let us help you stay ahead of the competition.
           </AboutP>
         </AboutContent>
       </AboutGrid>

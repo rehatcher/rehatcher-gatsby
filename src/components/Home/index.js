@@ -14,7 +14,7 @@ function Home() {
     <HomeContainer id="home">
       <HomeGrid>
         <HomeContent>
-          <HomeH1>Let us rebirth your company in the digital age.</HomeH1>
+          <HomeH1>Your business reborns in the digital age.</HomeH1>
           <HomeButton
             to="contact"
             smooth={true}

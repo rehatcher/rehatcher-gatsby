@@ -6,7 +6,6 @@ import {
   ContactH1,
   ContactP1,
   ContactP2,
-  ContactImg,
 } from "./ContactElements"
 import { RiFacebookBoxFill, RiPhoneFill, RiMailSendFill } from "react-icons/ri"
 
