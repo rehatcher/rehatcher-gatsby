@@ -1,11 +1,26 @@
 # Your business reborns in the digital age.
 
 # About Us
-We are specialized in digital business transformation and data governance. We can provide advice and analyze the current work process in order to design data structures and related parts that will allow us to bring information (Data) to use for maximum benefit (Insight) in terms of service, marketing, customer relations, and other tasks, including training employees with a team with over 20 years of experience.
+Businesses are competing with other players, but now the competition involves players from different domains. Technology makes the world smaller, and staying still is stepping backward. *Your business needs to be digitised*. Digitisation is not about being trendy with tech but helps cut costs, ignore geolocation limits, and reach more customers.
+Let us help you stay ahead of the competition.
 
-# 
-# Training
+# Services
+REHATCHER's expertise includes system development and integration, data governance, and training. Our teams have experiences in digital technology consulting and strong foundation in computer science.
 
-# Consulting
+## System Development and Integration
+* System analysis and design
+* Customised software development
+* DevOps process design and implementation
+* System integration 
 
-# System Development
+## Data Governance
+* Data pipeline design and implementation.
+* Big data design and implementation
+* Data infrastructure design and implementation
+
+## Training
+* In-house or online professional training including:
+** Software development
+** Data tools: Tableau, Power BI, Google Data Studio, etc.
+
+
