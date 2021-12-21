@@ -8,6 +8,7 @@
   "dependencies": {
     "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-manifest": "^4.2.0",
     "gatsby-plugin-offline": "^5.2.0",
@@ -32,7 +33,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

@@ -1,39 +1,54 @@
 import styled from "styled-components"
 
 export const AboutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: #ffffff;
-  width: 100%;
-  height: 600px;
-  left: 0px;
-  top: 1020px;
-  position: absolute;
+  padding: 50px;
+`
+
+export const AboutGrid = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    grid-template-columns: 1fr;
   }
 `
 
+export const AboutContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px;
+`
+
 export const AboutH1 = styled.h1`
+  font-style: normal;
+  font-weight: bold;
   font-size: 24px;
-  color: #000000;
-  width: 686px;
-  height: 36px;
-  left: 914px;
-  top: 180px;
-  position: absolute;
+  line-height: 36px;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 24px;
   }
 `
 
 export const AboutP = styled.p`
-  position: absolute;
-  width: 686px;
-  height: 180px;
-  left: 914px;
-  top: 240px;
-  
-  font-size: 1rem;
-  text-align: center;
+  padding: 24px 0;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+`
+
+export const AboutImg = styled.img`
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `

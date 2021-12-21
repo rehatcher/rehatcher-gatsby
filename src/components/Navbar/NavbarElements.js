@@ -1,18 +1,19 @@
 import styled from "styled-components"
-import { Link as LinkR } from "react-router-dom"
+import { Link } from "gatsby"
 import { Link as LinkS } from "react-scroll"
 
 export const Nav = styled.nav`
+  background: rgba(255, 255, 255, 0.8);
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
   width: 100%;
   z-index: 999;
+  font-size: 1rem;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -20,39 +21,47 @@ export const Nav = styled.nav`
 `
 
 export const NavbarContainer = styled.div`
-  position:absolute;
   display: flex;
   justify-content: space-between;
   height: 60px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
+  padding: 50px;
 `
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(Link)`
   color: #141414;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  margin-left: 24px;
-  font-weight: bold;
-  text-decoration: none;
+  font-size: 1.5rem;
+`
+
+export const NavImg = styled.img`
+  height: 40px;
+  padding-left: 50px;
+  
+  @media screen and (max-width:960px) {
+    height: 40px;
+    padding-left: 10px;
+  }
 `
 
 export const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
+    padding-right: 10px;
+    color: #f5862e;
     display: block;
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
     cursor: pointer;
+    font-size: 1.5rem;
   }
 `
 export const NavMenu = styled.ul`
@@ -60,31 +69,41 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
+  padding-right: 50px;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 960px) {
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: ${({ click }) => (click ? "100%" : "-1000px")};
+    transition: all 0.2s ease;
   }
 `
 
 export const NavItem = styled.li`
-  height: 80px;
+  height: 60px;
+  cursor: pointer;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 export const NavLinks = styled(LinkS)`
-  color: #F5862E;
+  color: #f5862e;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   height: 100%;
 
-  cursor: pointer;
-
   &:active {
-    border-bottom: 3px solid #F5862E;
+    border-bottom: 3px solid #f5862e;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;
     width: 100%;
