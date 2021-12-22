@@ -1,13 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: `REHATCHER`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `We are experts in digital business transformation and system design.
+    We can provide advice and analyze the current work process in order
+    to design data structures and related parts that will allow us to
+    bring information (Data) to use for maximum benefit (Insight) in
+    terms of service, marketing, customer relations, and other tasks,
+    including training employees with a team with over 20 years of
+    experience.`,
+    author: `REHATCHER`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,

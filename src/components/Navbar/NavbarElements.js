@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Link as LinkS } from "react-scroll"
 
 export const Nav = styled.nav`
   background: rgba(255, 255, 255, 0.8);
@@ -26,7 +25,6 @@ export const NavbarContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
-  padding: 50px;
 `
 
 export const NavLogo = styled(Link)`
@@ -41,11 +39,11 @@ export const NavLogo = styled(Link)`
 
 export const NavImg = styled.img`
   height: 40px;
-  padding-left: 50px;
-  
-  @media screen and (max-width:960px) {
+  padding-left: 100px;
+
+  @media screen and (max-width: 960px) {
     height: 40px;
-    padding-left: 10px;
+    padding-left: 100px;
   }
 `
 
@@ -69,7 +67,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  padding-right: 50px;
+  padding-right: 100px;
 
   @media screen and (max-width: 960px) {
     background: rgba(255, 255, 255, 0.8);
@@ -77,6 +75,8 @@ export const NavMenu = styled.ul`
     flex-direction: column;
     width: 100%;
     position: absolute;
+    padding: 0;
+
     top: ${({ click }) => (click ? "100%" : "-1000px")};
     transition: all 0.2s ease;
   }
@@ -91,7 +91,7 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(Link)`
   color: #f5862e;
   display: flex;
   align-items: center;
@@ -105,7 +105,6 @@ export const NavLinks = styled(LinkS)`
 
   @media screen and (max-width: 960px) {
     text-align: center;
-    padding: 2rem;
     width: 100%;
     display: table;
 

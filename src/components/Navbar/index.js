@@ -8,7 +8,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavImg
+  NavImg,
 } from "./NavbarElements"
 import Logo from "../../images/nav-logo.png"
 
@@ -35,7 +35,7 @@ const Navbar = () => {
     <>
       <Nav active={scrollNav} click={click}>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo to="/#home">
             <NavImg src={Logo} />
           </NavLogo>
           <MobileIcon onClick={handleClick}>
@@ -44,64 +44,26 @@ const Navbar = () => {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks
-                to="home"
-                smooth={true}
-                duration={800}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Home
-              </NavLinks>
+              <NavLinks to="/#home">Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/#about">About</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
-                to="about"
-                smooth={true}
-                duration={800}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                About
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="service"
-                smooth={true}
-                duration={800}
-                spy={true}
-                exact="true"
-                offset={-80}
+                to="/#service"
               >
                 Services
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="client"
-                smooth={true}
-                duration={800}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Clients
-              </NavLinks>
+              <NavLinks to="/#client">Clients</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="contact"
-                smooth={true}
-                duration={800}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Contact
-              </NavLinks>
+              <NavLinks to="/blog">Blogs</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/#contact">Contact</NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
@@ -111,104 +73,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-// const Navbar = ({ toggle }) => {
-//   const [click, setClick] = useState(false)
-//   const [scrollNav, setScrollNav] = useState(false)
-
-//   const changeNav = () => {
-//     if (window.scrollY >= 80) {
-//       setScrollNav(true)
-//     }
-
-//     setScrollNav(false)
-//   }
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", changeNav)
-//   }, [])
-
-//   const toggleHome = () => {
-//     scroll.scrollToTop()
-//   }
-
-//   return (
-//     <>
-//       <Nav scrollNav={scrollNav}>
-//         <NavbarContainer>
-//           <NavLogo to="home">
-//             REHATCHER
-//             {/* <NavLinks to="home">REHATCHER</NavLinks> */}
-//           </NavLogo>
-//           <MobileIcon onClick={toggleHome}>
-//             <FaBars />
-//           </MobileIcon>
-//           <NavMenu>
-//             <NavItem>
-//               <NavLinks
-//                 to="home"
-//                 smooth={true}
-//                 duration={500}
-//                 spy={true}
-//                 exact="true"
-//                 offset={-80}
-//               >
-//                 Home
-//               </NavLinks>
-//             </NavItem>
-//             <NavItem>
-//               <NavLinks
-//                 to="about"
-//                 smooth={true}
-//                 duration={500}
-//                 spy={true}
-//                 exact="true"
-//                 offset={-80}
-//               >
-//                 About
-//               </NavLinks>
-//             </NavItem>
-//             <NavItem>
-//               <NavLinks
-//                 to="service"
-//                 smooth={true}
-//                 duration={500}
-//                 spy={true}
-//                 exact="true"
-//                 offset={-80}
-//               >
-//                 Services
-//               </NavLinks>
-//             </NavItem>
-//             <NavItem>
-//               <NavLinks
-//                 to="client"
-//                 smooth={true}
-//                 duration={500}
-//                 spy={true}
-//                 exact="true"
-//                 offset={-80}
-//               >
-//                 Clients
-//               </NavLinks>
-//             </NavItem>
-//             <NavItem>
-//               <NavLinks
-//                 to="contact"
-//                 smooth={true}
-//                 duration={500}
-//                 spy={true}
-//                 exact="true"
-//                 offset={-80}
-//               >
-//                 Contact
-//               </NavLinks>
-//             </NavItem>
-//           </NavMenu>
-//         </NavbarContainer>
-//       </Nav>
-//     </>
-//   )
-// }
-
-// export default Navbar
