@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import demoImage from "../../images/coding-man.jpg"
 
 export default function IndexPage({
   data, // this prop will be injected by the GraphQL query below.
@@ -14,9 +15,17 @@ export default function IndexPage({
     const { date, slug, title } = markdownRemark.frontmatter
     return (
       <BlogCard>
-        <BlogTitle>{title}</BlogTitle>
-        <BlogP>{date}</BlogP>
-        <BlogButton to={slug}>Read More</BlogButton>
+        <BlogCardContent>
+          <BlogTitle>{title}</BlogTitle>
+          <BlogP>
+            คำโปรย demo blog
+          </BlogP>
+          <BlogDate>{date}</BlogDate>
+          <BlogButton to={slug}>Read More</BlogButton>
+        </BlogCardContent>
+        <BlogCardContent>
+          <BlogImg src={demoImage} />
+        </BlogCardContent>
       </BlogCard>
     )
   })
@@ -70,8 +79,6 @@ export const BlogWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
-  align-items: center;
-  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -79,10 +86,26 @@ export const BlogWrapper = styled.div`
 `
 
 export const BlogCard = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 0 50px;
+`
+
+export const BlogCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
   list-style: none;
   display: grid;
-  margin-top: 2rem;
   text-decoration: none;
+`
+
+export const BlogImg = styled.img`
+  width: 75vh;
+
+  @media screen and (max-width: 768px) {
+    width: 100%
+  }
 `
 
 export const BlogTitle = styled.h2`
@@ -94,6 +117,16 @@ export const BlogTitle = styled.h2`
 `
 
 export const BlogP = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 5px;
+
+  letter-spacing: -0.015em;
+`
+
+export const BlogDate = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
