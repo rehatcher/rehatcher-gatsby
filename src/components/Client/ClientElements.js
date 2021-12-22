@@ -11,7 +11,7 @@ export const ClientContainer = styled.div`
 export const ClientGrid = styled.div`
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;

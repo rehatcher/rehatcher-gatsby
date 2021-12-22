@@ -9,6 +9,7 @@ import {
 import colpalLogo from '../../images/Colpal_LOGO.png'
 import dastaLogo from '../../images/DASTA_LOGO.png'
 import cysecLogo from '../../images/Cysec_LOGO.png'
+import hondaLockLogo from '../../images/honda-lock.png'
 
 function Client() {
   return (
@@ -23,6 +24,9 @@ function Client() {
         </ClientContent>
         <ClientContent>
           <ClientImg src={cysecLogo} style={{height: "80px"}}/>
+        </ClientContent>
+        <ClientContent>
+          <ClientImg src={hondaLockLogo} style={{height: "150px"}}/>
         </ClientContent>
       </ClientGrid>
     </ClientContainer>
