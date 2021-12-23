@@ -5,7 +5,6 @@ import {
   ServicesWrapper,
   ServicesCard,
   ServicesH2,
-  ServicesP,
   ServicesList,
 } from "./ServicesElements"
 

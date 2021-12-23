@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 export default function IndexPage({
@@ -73,7 +72,7 @@ export const pageQuery = graphql`
   }
 `
 
-export const BlogContainer = styled.div`
+const BlogContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -82,24 +81,24 @@ export const BlogContainer = styled.div`
   padding: 50px;
 `
 
-export const BlogWrapper = styled.div`
+const BlogWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 16px;
+  grid-gap: 20px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `
 
-export const BlogCard = styled.div`
+const BlogCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   padding: 0 50px;
 `
 
-export const BlogCardContent = styled.div`
+const BlogCardContent = styled.div`
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -107,22 +106,14 @@ export const BlogCardContent = styled.div`
   text-decoration: none;
 `
 
-export const BlogImg = styled.img`
-  width: 75vh;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-`
-
-export const BlogTitle = styled.h2`
+const BlogTitle = styled.h2`
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   text-decoration: none;
 `
 
-export const BlogP = styled.p`
+const BlogP = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -131,7 +122,7 @@ export const BlogP = styled.p`
   letter-spacing: -0.015em;
 `
 
-export const BlogDate = styled.p`
+const BlogDate = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -140,7 +131,7 @@ export const BlogDate = styled.p`
   letter-spacing: -0.015em;
 `
 
-export const BlogButton = styled(Link)`
+const BlogButton = styled(Link)`
   width: 130px;
   height: 40px;
   border-radius: 6px;
