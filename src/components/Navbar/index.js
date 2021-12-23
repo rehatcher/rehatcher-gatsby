@@ -59,9 +59,9 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to="/#client">Clients</NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks to="/blog">Blogs</NavLinks>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLinks to="/#contact">Contact</NavLinks>
             </NavItem>

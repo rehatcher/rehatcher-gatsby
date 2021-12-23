@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import demoImage from "../../images/coding-man.jpg"
+import Img from "gatsby-image"
 
 export default function IndexPage({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,19 +12,18 @@ export default function IndexPage({
   console.log(allMarkdownRemark)
 
   const all = allMarkdownRemark.nodes.map(markdownRemark => {
-    const { date, slug, title } = markdownRemark.frontmatter
+    const { date, slug, title, blurb, thumb } = markdownRemark.frontmatter
+
     return (
       <BlogCard>
         <BlogCardContent>
           <BlogTitle>{title}</BlogTitle>
-          <BlogP>
-            คำโปรย demo blog
-          </BlogP>
+          <BlogP>{blurb}</BlogP>
           <BlogDate>{date}</BlogDate>
           <BlogButton to={slug}>Read More</BlogButton>
         </BlogCardContent>
         <BlogCardContent>
-          <BlogImg src={demoImage} />
+          <Img fluid={thumb.childImageSharp.fluid} />
         </BlogCardContent>
       </BlogCard>
     )
@@ -53,13 +52,21 @@ export default function IndexPage({
 }
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
+  query BlogPage {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           date
           slug
           title
+          blurb
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
@@ -104,7 +111,7 @@ export const BlogImg = styled.img`
   width: 75vh;
 
   @media screen and (max-width: 768px) {
-    width: 100%
+    width: 100%;
   }
 `
 
@@ -113,7 +120,6 @@ export const BlogTitle = styled.h2`
   font-weight: bold;
   font-size: 24px;
   text-decoration: none;
-  margin-bottom: 5px;
 `
 
 export const BlogP = styled.p`
@@ -121,7 +127,6 @@ export const BlogP = styled.p`
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  margin-top: 5px;
 
   letter-spacing: -0.015em;
 `
@@ -131,7 +136,6 @@ export const BlogDate = styled.p`
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  margin-top: 5px;
 
   letter-spacing: -0.015em;
 `
@@ -143,7 +147,6 @@ export const BlogButton = styled(Link)`
   white-space: nowrap;
   color: #f5862e;
   border: 2px solid #f5862e;
-  margin-top: 30px;
   font-size: 15px;
   display: flex;
   justify-content: center;
