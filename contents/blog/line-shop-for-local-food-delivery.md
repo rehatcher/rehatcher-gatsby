@@ -3,12 +3,16 @@ slug: "/blog/line-shop-for-local-food-delivery"
 date: "2021-12-05"
 title: "สร้างบริการ Food Delivery ด้วย LINE MyShop"
 blurb: "ในพื้นที่ที่ Food Delivery เจ้าใหญ่ยังไม่แพร่หลาย ท่านสามารถใช้ Platform ร้านค้าที่มีอยู่ประยุกต์ให้เกิดบริการส่งอาหาร และ ก่อให้เกิดรายได้ในชุมชนกันได้ เช่นการใช้ LINE MyShop"
+<<<<<<< HEAD
+featureImage: "line-shop-for-local-food-delivery-01.png"
+=======
 thumb: "./line-shop-for-local-food-delivery-01.jpg"
 featuredImage: "./line-shop-for-local-food-delivery-01.jpg"
+>>>>>>> 5abf762aeb01b015bc3b03fed5d9050d9dbff0d6
 ---
 ในพื้นที่ที่ Food Delivery เจ้าใหญ่ยังไม่แพร่หลาย ท่านสามารถใช้ Platform ร้านค้าที่มีอยู่ประยุกต์ให้เกิดบริการส่งอาหาร และ ก่อให้เกิดรายได้ในชุมชนกันได้ เช่นการใช้ [LINE MyShop](https://lineshoppingseller.com/)
 
-![Diagram](line-shop-for-local-food-delivery-01.jpg)
+![Diagram](line-shop-for-local-food-delivery-01.png)
 
 <li>ในกรณีที่ร้านค้า และ ลูกค้า มิได้เข้าถึงเทคโนโลยีอย่างทั่วถึง ร้านค้าในท้องที่ไม่จำเป็นจะต้องเป็นสมาชิก Platform หรือเฝ้ามองหน้าจอ LINE ตลอดเวลาเพื่อรับ Order และ แต่ลูกค้าอย่างน้อยควรมี LINE เพื่อใช้ติดต่อกับร้านของท่าน ที่ทำเสมือนเป็นศูนย์รวมอาหารของพื้นที่ 
 </li>
