@@ -28,7 +28,7 @@ export const BlogCard = styled.div`
   padding: 0 50px;
 `
 
- export const BlogCardContent = styled.div`
+export const BlogCardContent = styled.div`
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -36,15 +36,15 @@ export const BlogCard = styled.div`
   text-decoration: none;
 `
 
- export const BlogImg = styled.img`
+export const BlogImg = styled.img`
   width: 75vh;
 
   @media screen and (max-width: 768px) {
-    width: 100%
+    width: 100%;
   }
 `
 
- export const BlogTitle = styled.h2`
+export const BlogTitle = styled.h2`
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -52,7 +52,7 @@ export const BlogCard = styled.div`
   margin-bottom: 5px;
 `
 
- export const BlogP = styled.p`
+export const BlogP = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -62,7 +62,7 @@ export const BlogCard = styled.div`
   letter-spacing: -0.015em;
 `
 
- export const BlogDate = styled.p`
+export const BlogDate = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -72,7 +72,7 @@ export const BlogCard = styled.div`
   letter-spacing: -0.015em;
 `
 
- export const BlogButton = styled(Link)`
+export const BlogButton = styled(Link)`
   width: 130px;
   height: 40px;
   border-radius: 6px;
