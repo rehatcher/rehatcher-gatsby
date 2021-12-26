@@ -1,9 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
-// import styled from "styled-components"
-// import { Link } from "gatsby"
-import demoImage from "../../images/coding-man.jpg"
 import {
   BlogCard,
   BlogCardContent,
@@ -15,7 +12,7 @@ import {
   BlogContainer,
   BlogWrapper,
 } from "../../../src/components/styles/BlogStyles"
-// import * as BlogStyles from "../../../src/components/styles/BlogStyles"
+import Img from "gatsby-image"
 
 export default function IndexPage({
   data, // this prop will be injected by the GraphQL query below.
@@ -24,17 +21,18 @@ export default function IndexPage({
   console.log(allMarkdownRemark)
 
   const all = allMarkdownRemark.nodes.map(markdownRemark => {
-    const { date, slug, title } = markdownRemark.frontmatter
+    const { date, slug, title, blurb, thumb } = markdownRemark.frontmatter
+
     return (
       <BlogCard>
         <BlogCardContent>
           <BlogTitle>{title}</BlogTitle>
-          <BlogP>คำโปรย demo blog</BlogP>
+          <BlogP>{blurb}</BlogP>
           <BlogDate>{date}</BlogDate>
           <BlogButton to={slug}>Read More</BlogButton>
         </BlogCardContent>
         <BlogCardContent>
-          <BlogImg src={demoImage} />
+          <Img fluid={thumb.childImageSharp.fluid} />
         </BlogCardContent>
       </BlogCard>
     )
@@ -63,13 +61,21 @@ export default function IndexPage({
 }
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
+  query BlogPage {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           date
           slug
           title
+          blurb
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
