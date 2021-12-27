@@ -10,13 +10,18 @@ export default function Template({
   return (
     <>
       <Layout>
-        <div>
-          <div>
-            <h1>{frontmatter.title}</h1>
-            <h2>Date: {frontmatter.date}</h2>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div style={{ padding: "60px" }}>
+          <div style={{ padding: "0 50px" }}>
+            <h1 style={{ textAlign: "center" }}>{frontmatter.title}</h1>
+            <p style={{ paddingTop: "20px" }}>Date: {frontmatter.date}</p>
+            <div
+              style={{ lineHeight: "30px", paddingTop: "20px", listStylePosition: "inside"}}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
-          <a href="/blog">Back to blog list</a>
+          <div style={{ padding: "20px 50px" }}>
+            <a href="/blog">Back to blog list</a>
+          </div>
         </div>
       </Layout>
     </>

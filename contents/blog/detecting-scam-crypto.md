@@ -6,6 +6,7 @@ blurb: "คัดกรองเหรียญหลอกลวง"
 featureImage: "line-shop-for-local-food-delivery-01.jpg"
 language: "TH"
 autho: "Chayapol Moemeng"
+featuredImage: "./line-shop-for-local-food-delivery-01.png"
 ---
 ขั้นตอนพื้นฐานในการตรวจว่าเหรียญนั้นตั้งท่าจะ Rug Pull หรือเปล่า
 1. ผู้โปรโมทเหรียญมีความรู้เรื่องเหรียญนั้นหรือเปล่า - บางทีเขาก็ถูกจ้างมาให้พูดถึงเหรียญนั้น

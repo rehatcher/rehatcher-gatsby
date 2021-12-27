@@ -20,7 +20,7 @@ export default function IndexPage({
   console.log(allMarkdownRemark)
 
   const all = allMarkdownRemark.nodes.map(markdownRemark => {
-    const { date, slug, title, blurb, thumb } = markdownRemark.frontmatter
+    const { date, slug, title, blurb, featuredImage } = markdownRemark.frontmatter
 
     return (
       <BlogCard>
@@ -31,7 +31,7 @@ export default function IndexPage({
           <BlogButton to={slug}>Read More</BlogButton>
         </BlogCardContent>
         <BlogCardContent>
-          <Img fluid={thumb.childImageSharp.fluid} />
+          <Img fluid={featuredImage.childImageSharp.fluid} />
         </BlogCardContent>
       </BlogCard>
     )
@@ -68,7 +68,7 @@ export const pageQuery = graphql`
           slug
           title
           blurb
-          thumb {
+          featuredImage {
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid
