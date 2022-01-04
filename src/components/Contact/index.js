@@ -8,6 +8,7 @@ import {
   ContactP2,
 } from "./ContactElements"
 import { RiFacebookBoxFill, RiPhoneFill, RiMailSendFill } from "react-icons/ri"
+const packageJson = require("/package.json")
 
 function Contact() {
   return (
@@ -45,6 +46,7 @@ function Contact() {
           </ContactP2>
         </ContactContent>
       </ContactGrid>
+      <div style={{ textAlign: "right" }}>version: {packageJson.version}</div>
     </ContactContainer>
   )
 }
