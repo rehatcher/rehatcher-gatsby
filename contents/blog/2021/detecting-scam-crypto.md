@@ -2,11 +2,10 @@
 slug: "/blog/detecting-scam-crypto"
 date: "2021-12-24"
 title: "คัดกรองเหรียญหลอกลวง"
-blurb: "คัดกรองเหรียญหลอกลวง"
-featureImage: "line-shop-for-local-food-delivery-01.jpg"
+blurb: "Cryptocurrency มีออกมาใหม่ตลอดเวลา ที่ผ่านมาก็ทำความเสียหายให้กับนักลงทุนไปมากมาย เพราะเหรียญที่ออกมาโฆษณาว่ามีอนาคต และ ถูกปั่นกระแสด้วยนักวิเคราะห์บน Internet มาป้องกันความเสียหายโดยวิธีคัดกรองเหรียญหลอกลวงเบื้องต้นกัน"
 language: "TH"
-autho: "Chayapol Moemeng"
-featuredImage: "./line-shop-for-local-food-delivery-01.png"
+author: "Chayapol Moemeng"
+featuredImage: "./detecting-scam-crypto.png"
 ---
 ขั้นตอนพื้นฐานในการตรวจว่าเหรียญนั้นตั้งท่าจะ Rug Pull หรือเปล่า
 1. ผู้โปรโมทเหรียญมีความรู้เรื่องเหรียญนั้นหรือเปล่า - บางทีเขาก็ถูกจ้างมาให้พูดถึงเหรียญนั้น

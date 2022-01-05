@@ -17,6 +17,7 @@ const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const handleClick = () => setClick(!click)
+  const DEV_MODE = process.env.NODE_ENV === "development"
 
   const changeNav = () => {
     if (window.scrollY >= 60) {
@@ -50,18 +51,16 @@ const Navbar = () => {
               <NavLinks to="/#about">About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="/#service"
-              >
-                Services
-              </NavLinks>
+              <NavLinks to="/#service">Services</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/#client">Clients</NavLinks>
             </NavItem>
-            {/* <NavItem>
-              <NavLinks to="/blog">Blogs</NavLinks>
-            </NavItem> */}
+            {DEV_MODE && (
+              <NavItem>
+                <NavLinks to="/blog">Blogs</NavLinks>
+              </NavItem>
+            )}
             <NavItem>
               <NavLinks to="/#contact">Contact</NavLinks>
             </NavItem>
