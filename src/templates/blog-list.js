@@ -36,7 +36,9 @@ export default function BlogList({ data, pageContext }) {
           <BlogButton to={slug}>Read More</BlogButton>
         </BlogCardContent>
         <BlogCardContent>
-          <Img fluid={featuredImage.childImageSharp.fluid} />
+          {/* <Img fluid={featuredImage.childImageSharp.fluid} /> */}
+          {featuredImage}
+          <img src={featuredImage} />
         </BlogCardContent>
       </BlogCard>
     )
@@ -59,7 +61,7 @@ export default function BlogList({ data, pageContext }) {
           </h1>
           <BlogWrapper>{all}</BlogWrapper>
         </BlogContainer>
-        <div style={{alignItems: "center"}}>
+        <div style={{ alignItems: "center" }}>
           <Link to={prevPage} rel="prev">
             Previous Page
           </Link>
@@ -86,16 +88,37 @@ export const pageQuery = graphql`
             slug
             title
             blurb
-            featuredImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            featuredImage
           }
         }
       }
     }
   }
 `
+// export const pageQuery = graphql`
+//   query blogListQuery($skip: Int!, $limit: Int!) {
+//     allMarkdownRemark(
+//       sort: { fields: frontmatter___date, order: DESC }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             date
+//             slug
+//             title
+//             blurb
+//             featuredImage {
+//               childImageSharp {
+//                 fluid {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
