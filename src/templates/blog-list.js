@@ -11,7 +11,8 @@ import {
   BlogContainer,
   BlogWrapper,
 } from "../components/styles/BlogStyles"
-import Img from "gatsby-image"
+
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function BlogList({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
@@ -35,11 +36,16 @@ export default function BlogList({ data, pageContext }) {
           <BlogDate>{date}</BlogDate>
           <BlogButton to={slug}>Read More</BlogButton>
         </BlogCardContent>
-        <BlogCardContent>
-          {/* <Img fluid={featuredImage.childImageSharp.fluid} /> */}
-          {featuredImage}
-          <img src={featuredImage} />
-        </BlogCardContent>
+        {featuredImage && (
+          <BlogCardContent>
+            <GatsbyImage
+              image={featuredImage.childImageSharp.gatsbyImageData}
+              alt={title}
+              objectFit={"contain"}
+              style={{ width: "50vw" }}
+            />
+          </BlogCardContent>
+        )}
       </BlogCard>
     )
   })
@@ -88,37 +94,14 @@ export const pageQuery = graphql`
             slug
             title
             blurb
-            featuredImage
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }
     }
   }
 `
-// export const pageQuery = graphql`
-//   query blogListQuery($skip: Int!, $limit: Int!) {
-//     allMarkdownRemark(
-//       sort: { fields: frontmatter___date, order: DESC }
-//       limit: $limit
-//       skip: $skip
-//     ) {
-//       edges {
-//         node {
-//           frontmatter {
-//             date
-//             slug
-//             title
-//             blurb
-//             featuredImage {
-//               childImageSharp {
-//                 fluid {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

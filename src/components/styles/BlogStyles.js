@@ -34,6 +34,7 @@ export const BlogCardContent = styled.div`
   list-style: none;
   display: grid;
   text-decoration: none;
+  // border: 1px solid black;
 `
 
 export const BlogImg = styled.img`

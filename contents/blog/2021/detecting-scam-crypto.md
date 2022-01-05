@@ -2,7 +2,7 @@
 slug: "/blog/detecting-scam-crypto"
 date: "2021-12-24"
 title: "คัดกรองเหรียญหลอกลวง"
-blurb: "คัดกรองเหรียญหลอกลวง"
+blurb: "Cryptocurrency มีออกมาใหม่ตลอดเวลา ที่ผ่านมาก็ทำความเสียหายให้กับนักลงทุนไปมากมาย เพราะเหรียญที่ออกมาโฆษณาว่ามีอนาคต และ ถูกปั่นกระแสด้วยนักวิเคราะห์บน Internet มาป้องกันความเสียหายโดยวิธีคัดกรองเหรียญหลอกลวงเบื้องต้นกัน"
 language: "TH"
 author: "Chayapol Moemeng"
 featuredImage: "./detecting-scam-crypto.png"
