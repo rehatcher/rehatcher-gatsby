@@ -4,7 +4,27 @@ const { createFilePath } = require("gatsby-source-filesystem")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const result = await graphql(
+  const resultCourses = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          filter: { frontmatter: { contentType: { eq: "course" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const resultBlogs = await graphql(
     `
       {
         allMarkdownRemark(
@@ -22,13 +42,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   )
-  if (result.errors) {
+
+  if (resultBlogs.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
+  // Create course-list pages
+  const courses = resultCourses.data.allMarkdownRemark.edges
+  const coursePerPage = 3
+  const courseNumPages = Math.ceil(courses.length / coursePerPage)
+  Array.from({ length: courseNumPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/courses` : `/courses/${i + 1}`,
+      component: path.resolve("./src/templates/course-list.js"),
+      context: {
+        limit: coursePerPage,
+        skip: i * coursePerPage,
+        courseNumPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
   // Create blog-list pages
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = resultBlogs.data.allMarkdownRemark.edges
   const postsPerPage = 3
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {

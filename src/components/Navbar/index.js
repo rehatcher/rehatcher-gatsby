@@ -57,9 +57,14 @@ const Navbar = () => {
               <NavLinks to="/#client">Clients</NavLinks>
             </NavItem>
             {DEV_MODE && (
-              <NavItem>
-                <NavLinks to="/blog">Blogs</NavLinks>
-              </NavItem>
+              <>
+                <NavItem>
+                  <NavLinks to="/blog">Blogs</NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks to="/courses">Courses</NavLinks>
+                </NavItem>
+              </>
             )}
             <NavItem>
               <NavLinks to="/#contact">Contact</NavLinks>

@@ -61,6 +61,13 @@ module.exports = {
         path: `${__dirname}/contents/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `courses`,
+        path: `${__dirname}/contents/courses`,
+      },
+    },    
     "gatsby-transformer-remark",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
