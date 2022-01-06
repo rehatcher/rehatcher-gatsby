@@ -42,7 +42,7 @@ export default function BlogList({ data, pageContext }) {
               image={featuredImage.childImageSharp.gatsbyImageData}
               alt={title}
               objectFit={"contain"}
-              style={{ width: "50vw" }}
+              style={{ height: "500px", width: "500px"}}
             />
           </BlogCardContent>
         )}
@@ -63,11 +63,11 @@ export default function BlogList({ data, pageContext }) {
               textAlign: "center",
             }}
           >
-            Our Blogs
+            Blogs
           </h1>
           <BlogWrapper>{all}</BlogWrapper>
         </BlogContainer>
-        <div style={{ alignItems: "center" }}>
+        <div style={{ alignItems: "center", textAlign: "center" }}>
           <Link to={prevPage} rel="prev">
             Previous Page
           </Link>

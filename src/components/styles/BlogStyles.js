@@ -6,26 +6,26 @@ export const BlogContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
   z-index: 1;
   padding: 50px;
 `
 
 export const BlogWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  justify-content: center;
+  flex-direction: column;
   grid-gap: 16px;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+  padding: 0 200px;
 `
 
 export const BlogCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  padding: 0 50px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const BlogCardContent = styled.div`
