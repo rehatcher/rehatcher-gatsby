@@ -34,6 +34,47 @@ const Navbar = () => {
 
   return (
     <>
+      {/* <nav className="flex bg-white/[0.8] justify-center fixed w-full h-16 top-0">
+        <div className="md:flex items-center justify-between w-full px-14">
+          <div className="items-center flex text-2xl">
+            <a href="/#home" className="cursor-pointer">
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-[45px] w-[150px] object-scale-down"
+              />
+            </a>
+          </div>
+          <div className="md:hidden absolute cursor-pointer ">{click ? <FaTimes /> : <FaBars />}</div>
+          <ul className="flex items-center text-[#f5862e] no-underline">
+            <li className="cursor-pointer ml-8">
+              <a href="/#home">Home</a>
+            </li>
+            <li className="cursor-pointer ml-8">
+              <a href="/#about">About</a>
+            </li>
+            <li className="cursor-pointer ml-8">
+              <a href="/#service">Services</a>
+            </li>
+            <li className="cursor-pointer ml-8">
+              <a href="/#client">Clients</a>
+            </li>
+            {DEV_MODE && (
+              <>
+                <li className="cursor-pointer ml-8">
+                  <a href="/blog">Blogs</a>
+                </li>
+                <li className="cursor-pointer ml-8">
+                  <a href="/courses">Courses</a>
+                </li>
+              </>
+            )}
+            <li className="cursor-pointer ml-8">
+              <a href="/#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav> */}
       <Nav active={scrollNav} click={click}>
         <NavbarContainer>
           <NavLogo to="/#home">

@@ -18,8 +18,6 @@ export default function BlogList({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
   console.log(posts)
   const { currentPage, numPages } = pageContext
-  // const isFirst = currentPage === 1
-  // const isLast = currentPage === numPages
   const prevPage =
     currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
   const nextPage = "/blog/" + (currentPage + 1).toString()
@@ -53,7 +51,7 @@ export default function BlogList({ data, pageContext }) {
   return (
     <>
       <Layout>
-        <BlogContainer id="blog">
+        <div class="relative" id="blog">
           <h1
             style={{
               fontSize: "48px",
@@ -66,7 +64,7 @@ export default function BlogList({ data, pageContext }) {
             Blogs
           </h1>
           <BlogWrapper>{all}</BlogWrapper>
-        </BlogContainer>
+        </div>
         <div style={{ alignItems: "center", textAlign: "center" }}>
           {currentPage > 1 && (
             <Link to={prevPage} rel="prev">

@@ -10,7 +10,7 @@ import {
   BlogButton,
   BlogContainer,
   BlogWrapper,
-} from "../components/styles/BlogStyles"
+} from "../styles/BlogStyles"
 
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -18,8 +18,6 @@ export default function CourseList({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
   console.log(posts)
   const { currentPage, numPages } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
   const prevPage =
     currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
   const nextPage = "/blog/" + (currentPage + 1).toString()
@@ -42,7 +40,7 @@ export default function CourseList({ data, pageContext }) {
               image={featuredImage.childImageSharp.gatsbyImageData}
               alt={title}
               objectFit={"contain"}
-              style={{ height: "500px", width: "500px"}}
+              style={{ height: "500px", width: "500px" }}
             />
           </BlogCardContent>
         )}
@@ -68,18 +66,22 @@ export default function CourseList({ data, pageContext }) {
           <BlogWrapper>{all}</BlogWrapper>
         </BlogContainer>
         <div style={{ alignItems: "center", textAlign: "center" }}>
-          <Link to={prevPage} rel="prev">
-            Previous Page
-          </Link>
-          <Link to={nextPage} rel="next">
-            Next Page
-          </Link>
+          {currentPage > 1 && (
+            <Link to={prevPage} rel="prev">
+              Previous Page
+            </Link>
+          )}
+
+          {currentPage < numPages && (
+            <Link to={nextPage} rel="next">
+              Next Page
+            </Link>
+          )}
         </div>
       </Layout>
     </>
   )
 }
-
 
 export const pageQuery = graphql`
   query courseListQuery($skip: Int!, $limit: Int!) {
