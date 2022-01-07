@@ -10,7 +10,7 @@ import {
   BlogButton,
   BlogContainer,
   BlogWrapper,
-} from "../components/styles/BlogStyles"
+} from "../styles/BlogStyles"
 
 import { GatsbyImage } from "gatsby-plugin-image"
 

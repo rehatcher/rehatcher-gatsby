@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -68,7 +69,7 @@ module.exports = {
         path: `${__dirname}/contents/courses`,
       },
     },    
-    "gatsby-transformer-remark",
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

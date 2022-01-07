@@ -14,12 +14,14 @@ export const BlogWrapper = styled.div`
   display: grid;
   justify-content: center;
   flex-direction: column;
+  grid-template-rows: 1fr;
   grid-gap: 16px;
   padding: 0 200px;
 `
 
 export const BlogCard = styled.div`
-  display: grid;
+  display: flex;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 
@@ -31,18 +33,15 @@ export const BlogCard = styled.div`
 export const BlogCardContent = styled.div`
   display: flex;
   flex-direction: column;
-  list-style: none;
-  display: grid;
-  text-decoration: none;
-  // border: 1px solid black;
+  width: 100%;
+  max-width: 100%;
 `
 
-export const BlogImg = styled.img`
-  width: 75vh;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+export const BlogCardImage = styled.div`
+  width: 100%;
+  max-width: 40%;
+  min-width: 40%;
+  max-height: 100%;
 `
 
 export const BlogTitle = styled.h2`
