@@ -28,6 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
+          filter: { frontmatter: { contentType: { ne: "course" } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {

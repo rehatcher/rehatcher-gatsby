@@ -18,7 +18,8 @@ const Layout = ({ children }) => {
         declineButtonText="Decline"
         cookieName="gatsby-gdpr-google-analytics"
       >
-        This site uses cookies to improve your experience on our site.
+        <h4>เว็บไซต์นี้ใช้คุกกี้</h4>
+เราใช้คุกกี้เพื่อเพิ่มประสิทธิภาพ และประสบการณ์ที่ดีในการใช้งานเว็บไซต์ คุณสามารถเลือกตั้งค่าความยินยอมการใช้คุกกี้ได้ โดยคลิก "การตั้งค่าคุกกี้"นโยบายความเป็นส่วนตัว
       </CookieConsent>
     </>
   )
