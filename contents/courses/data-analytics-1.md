@@ -8,4 +8,7 @@ author: "Chayapol Moemeng"
 featuredImage: "../blog/2021/detecting-scam-crypto.png"
 contentType: "course"
 ---
-data-analytics-1
+หลักสูตรพัฒนาทักษะ Data Analytics ครอบคลุมการใช้งาน
+* Excel
+* Tableau
+* Google Data Studio

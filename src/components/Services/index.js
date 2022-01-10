@@ -13,12 +13,8 @@ const Services = () => {
     <ServicesContainer id="service">
       <ServicesH1>Our Services</ServicesH1>
       <p
-        style={{
-          paddingLeft: "50px",
-          paddingRight: "50px",
-          paddingBottom: "50px",
-        }}
-      >
+      className="pl-[50px] pr-4 pb-4">
+        
         REHATCHER's expertise includes system development and integration, data
         governance, and training. Our teams have experiences in digital
         technology consulting and strong foundation in computer science.
