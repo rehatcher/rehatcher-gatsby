@@ -11,7 +11,6 @@ import {
   BlogContainer,
   BlogWrapper,
 } from "../styles/BlogStyles"
-
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function BlogList({ data, pageContext }) {
@@ -51,21 +50,14 @@ export default function BlogList({ data, pageContext }) {
   return (
     <>
       <Layout>
-        <div class="relative" id="blog">
-          <h1
-            style={{
-              fontSize: "48px",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              padding: "50px",
-              textAlign: "center",
-            }}
-          >
+        <div class="relative py-16" id="blog">
+          <h1 className="text-5xl text-center non-italic font-normal">
             Blogs
           </h1>
-          <BlogWrapper>{all}</BlogWrapper>
+          <div className="grid justify-center flex-col grid-cols-1 px-52 py-12">{all}</div>
+          {/* <BlogWrapper>{all}</BlogWrapper> */}
         </div>
-        <div style={{ alignItems: "center", textAlign: "center" }}>
+        <div className="text-center items-center">
           {currentPage > 1 && (
             <Link to={prevPage} rel="prev">
               Previous Page
