@@ -12,11 +12,11 @@ const packageJson = require("/package.json")
 
 function Contact() {
   return (
-    <ContactContainer id="contact">
-      <ContactH1>Contact Us</ContactH1>
-      <ContactGrid>
-        <ContactContent>
-          <ContactP1>
+    <div className="flex justify-center flex-col bg-[#f5f5f5] p-14" id="contact">
+      <h1 className="py-14 font-bold text-2xl not-italic mb-6 text-[#f5862e]">Contact Us</h1>
+      <div className="grid grid-cols-3 md:grid-cols-1">
+        <div className="flex flex-col justify-start py-[50px] transition-all">
+          <p className="text-lg text-black/[0.8]">
             Rehatcher Co., Ltd.
             <br />
             279/15
@@ -32,10 +32,10 @@ function Contact() {
             10250
             <br />
             Thailand
-          </ContactP1>
-        </ContactContent>
-        <ContactContent>
-          <ContactP2>
+          </p>
+        </div>
+        <div className="flex flex-col justify-start py-[50px] transition-all">
+          <p className="text-lg text-black/[0.8]">
             <RiMailSendFill style={{ "margin-right": "10px" }} />
             Email: info@rehatcher.com <br />
             <RiPhoneFill style={{ "margin-right": "10px" }} />
@@ -43,11 +43,11 @@ function Contact() {
             <RiFacebookBoxFill style={{ "margin-right": "10px" }} />
             Facebook: Rehatcher <br />
             {/* Line: @rehatcher_th */}
-          </ContactP2>
-        </ContactContent>
-      </ContactGrid>
+          </p>
+        </div>
+      </div>
       <div style={{ textAlign: "right" }}>version: {packageJson.version}</div>
-    </ContactContainer>
+    </div>
   )
 }
 

@@ -26,6 +26,16 @@ export default function BlogList({ data, pageContext }) {
       markdownRemark.frontmatter
 
     return (
+      // <div className="flex w-full grid-cols-2 gap-4 md:grid-cols-1">
+      //   <div className="flex flex-col w-full max-w-full">
+      //     <h2 className="not-italic font-bold text-2xl mb-2 no-underline">
+      //       {title}
+      //     </h2>
+      //     <p className="not-italic font-normal text-lg mt-2 tracking-tight">{blurb}</p>
+      //     <p className="not-italic font-normal text-lg mt-2 tracking-tight>{date}</p>
+
+      //   </div>
+      // </div>
       <BlogCard>
         <BlogCardContent>
           <BlogTitle>{title}</BlogTitle>
@@ -51,10 +61,10 @@ export default function BlogList({ data, pageContext }) {
     <>
       <Layout>
         <div class="relative py-16" id="blog">
-          <h1 className="text-5xl text-center non-italic font-normal">
-            Blogs
-          </h1>
-          <div className="grid justify-center flex-col grid-cols-1 px-52 py-12">{all}</div>
+          <h1 className="text-5xl text-center not-italic font-normal">Blogs</h1>
+          <div className="grid justify-center flex-col grid-cols-1 gap-4 px-52 py-12">
+            {all}
+          </div>
           {/* <BlogWrapper>{all}</BlogWrapper> */}
         </div>
         <div className="text-center items-center">

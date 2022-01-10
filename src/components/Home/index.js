@@ -11,10 +11,10 @@ import HomeBanner from "../../images/home-banner.png"
 
 function Home() {
   return (
-    <HomeContainer id="home">
-      <HomeGrid>
-        <HomeContent>
-          <HomeH1>Your business reborns in the digital age.</HomeH1>
+    <div className="flex justify-center flex-col relative p-[50px]" id="home">
+      <div className="grid grid-cols-2 md:grid-cols-1 items-center mx-auto">
+        <div className="flex flex-col justify-start p-[50px]">
+          <h1 className="text-6xl not-italic font-normal">Your business reborns in the digital age.</h1>
           <HomeButton
             to="contact"
             smooth={true}
@@ -25,12 +25,12 @@ function Home() {
           >
             Contact Us
           </HomeButton>
-        </HomeContent>
-        <HomeContent>
-          <HomeImg src={HomeBanner} />
-        </HomeContent>
-      </HomeGrid>
-    </HomeContainer>
+        </div>
+        <div className="flex flex-col justify-start p-[50px]">
+          <img src={HomeBanner} />
+        </div>
+      </div>
+    </div>
   )
 }
 
