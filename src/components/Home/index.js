@@ -11,10 +11,13 @@ import HomeBanner from "../../images/home-banner.png"
 
 function Home() {
   return (
-    <div className="flex justify-center flex-col relative p-[50px]" id="home">
-      <div className="grid grid-cols-2 md:grid-cols-1 items-center mx-auto">
-        <div className="flex flex-col justify-start p-[50px]">
-          <h1 className="text-6xl not-italic font-normal">Your business reborns in the digital age.</h1>
+    <div className="flex justify-center flex-col relative md:p-[50px]" id="home">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center mx-auto">
+
+        <div className="order-2 md:order-1 flex flex-col justify-start p-[50px]">
+          <h1 className=" text-4xl md:text-6xl not-italic font-normal">
+            Your business reborns in the digital age.
+            </h1>
           <HomeButton
             to="contact"
             smooth={true}
@@ -26,8 +29,9 @@ function Home() {
             Contact Us
           </HomeButton>
         </div>
-        <div className="flex flex-col justify-start p-[50px]">
-          <img src={HomeBanner} />
+
+        <div className="order-1 md:order-2 mt-20">
+          <img className="w-full" src={HomeBanner} />
         </div>
       </div>
     </div>

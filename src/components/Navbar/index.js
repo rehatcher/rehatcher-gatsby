@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex bg-white/[0.8] justify-center fixed w-full h-16 top-0">
+      <nav className="flex bg-white/[0.8] justify-center fixed w-full h-16 top-0 z-10">
         <div className="md:flex items-center justify-between w-full px-14">
           <div className="items-center flex text-2xl">
             <a href="/#home" className="cursor-pointer">
