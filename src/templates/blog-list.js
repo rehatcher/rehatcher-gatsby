@@ -1,16 +1,6 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import {
-  BlogCard,
-  BlogCardContent,
-  BlogTitle,
-  BlogP,
-  BlogDate,
-  BlogButton,
-  BlogContainer,
-  BlogWrapper,
-} from "../styles/BlogStyles"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function BlogList({ data, pageContext }) {
@@ -26,58 +16,58 @@ export default function BlogList({ data, pageContext }) {
       markdownRemark.frontmatter
 
     return (
-      // <div className="flex w-full grid-cols-2 gap-4 md:grid-cols-1">
-      //   <div className="flex flex-col w-full max-w-full">
-      //     <h2 className="not-italic font-bold text-2xl mb-2 no-underline">
-      //       {title}
-      //     </h2>
-      //     <p className="not-italic font-normal text-lg mt-2 tracking-tight">{blurb}</p>
-      //     <p className="not-italic font-normal text-lg mt-2 tracking-tight>{date}</p>
-
-      //   </div>
-      // </div>
-      <BlogCard>
-        <BlogCardContent>
-          <BlogTitle>{title}</BlogTitle>
-          <BlogP>{blurb}</BlogP>
-          <BlogDate>{date}</BlogDate>
-          <BlogButton to={slug}>Read More</BlogButton>
-        </BlogCardContent>
-        {featuredImage && (
-          <BlogCardContent>
-            <GatsbyImage
-              image={featuredImage.childImageSharp.gatsbyImageData}
-              alt={title}
-              objectFit={"contain"}
-              style={{ height: "500px", width: "500px" }}
-            />
-          </BlogCardContent>
-        )}
-      </BlogCard>
+      <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row md:max-w-7xl">
+          <div className="order-2 md:order-1 flex flex-col justify-start">
+            <h2 className="not-italic font-bold text-2xl mb-2 no-underline">
+              {title}
+            </h2>
+            <p className="not-italic font-normal text-lg mt-2 tracking-tight">
+              {blurb}
+            </p>
+            <p className="not-italic font-normal text-lg mt-2 tracking-tight">
+              {date}
+            </p>
+            <button className="text-[#f5862e] hover:text-[#fff] rounded-md border border-[#f5862e] hover:bg-[#f5862e] mt-5 w-20 md:w-40 h-10 md:h-12">
+              <a href={slug}>Read more</a>
+            </button>
+          </div>
+          {featuredImage && (
+            <div className="w-full h-96 md:h-auto object-cover md:w-48">
+              <GatsbyImage
+                image={featuredImage.childImageSharp.gatsbyImageData}
+                alt={title}
+                objectFit={"contain"}
+                style={{ height: "500px", width: "500px" }}
+              />
+            </div>
+          )}
+        </div>
+      </div>
     )
   })
 
   return (
     <>
       <Layout>
-        <div class="relative py-16" id="blog">
-          <h1 className="text-5xl text-center not-italic font-normal">Blogs</h1>
-          <div className="grid justify-center flex-col grid-cols-1 gap-4 px-52 py-12">
-            {all}
-          </div>
+        <div class="flex justify-center flex-col md:p-[50px]" id="blog">
+          <h1 className="text-5xl p-[50px] not-italic font-normal text-center">
+            Blogs
+          </h1>
+          <div className="grid grid-cols-1 justify-center">{all}</div>
           {/* <BlogWrapper>{all}</BlogWrapper> */}
         </div>
         <div className="text-center items-center">
           {currentPage > 1 && (
-            <Link to={prevPage} rel="prev">
+            <a href={prevPage} rel="prev">
               Previous Page
-            </Link>
+            </a>
           )}
 
           {currentPage < numPages && (
-            <Link to={nextPage} rel="next">
+            <a href={nextPage} rel="next">
               Next Page
-            </Link>
+            </a>
           )}
         </div>
       </Layout>

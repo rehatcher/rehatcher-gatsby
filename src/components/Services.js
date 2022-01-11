@@ -15,30 +15,30 @@ const Services = () => {
       </div>
   
       <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="flex flex-col justify-start px-[50px] transition-all">
+        <div className="block px-[50px]">
           <h2 className="mb-6 not-italic font-bold text-2xl">
             System Development and Integration
           </h2>
-          <ul className="text-lg font-normal not-italic list-inside">
+          <ul className="text-lg font-normal not-italic list-inside list-disc">
             <li>System analysis and design</li>
             <li>Customised software development</li>
             <li>DevOps process design and implementation</li>
             <li>System integration</li>
           </ul>
         </div>
-        <div className="flex flex-col justify-start px-[50px] transition-all">
+        <div className="block px-[50px]">
           <h2 className="mb-6 not-italic font-bold text-2xl">
             Data Governance
           </h2>
-          <ul className="text-lg font-normal not-italic list-inside">
+          <ul className="text-lg font-normal not-italic list-inside list-disc">
             <li>Data pipeline design and implementation</li>
             <li>Big data design and implementation</li>
             <li>Data infrastructure design and implementation</li>
           </ul>
         </div>
-        <div className="flex flex-col justify-start px-[50px] transition-all">
+        <div className="block px-[50px]">
           <h2 className="mb-6 not-italic font-bold text-2xl">Training</h2>
-          <ul className="text-lg font-normal not-italic list-inside">
+          <ul className="text-lg font-normal not-italic list-inside list-disc">
             <p>In-house or online professional training including:</p>
             <li>Software development</li>
             <li>Data tools: Tableau, Power BI, Google Data Studio, etc.</li>

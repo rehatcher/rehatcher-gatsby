@@ -6,7 +6,7 @@ const About = () => {
     <div className="flex justify-center flex-col md:p-[50px]" id="about">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         <div className="flex flex-col justify-start md:p-[50px]">
-          <img className="w-full" src={aboutImg} />
+          <img className="w-full" alt="" src={aboutImg} />
         </div>
         <div className="flex flex-col justify-start p-[50px] md:p-[50px]">
           <h1 className="text-2xl not-italic font-bold">About Us</h1>
