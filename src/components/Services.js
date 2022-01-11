@@ -1,27 +1,24 @@
 import React from "react"
-import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesH2,
-  ServicesList,
-} from "./ServicesElements"
 
 const Services = () => {
   return (
-    <div className="flex justify-center flex-col p-[50px]" id="service">
-      <h1 className="text-5xl font-normal not-italic p-[50px]">Our Services</h1>
-      <p
-      className="text-lg font-normal not-italic">
-        
-        REHATCHER's expertise includes system development and integration, data
-        governance, and training. Our teams have experiences in digital
-        technology consulting and strong foundation in computer science.
-      </p>
-      <div className="grid grid-cols-3 md:grid-cols-1">
+    <div className="flex justify-center flex-col md:p-[50px]" id="service">
+      <div className="font-normal not-italic p-[50px]">
+        <h1 className="text-5xl">
+          Our Services
+        </h1>
+        <p className="text-lg mt-[50px]">
+          REHATCHER's expertise includes system development and integration,
+          data governance, and training. Our teams have experiences in digital
+          technology consulting and strong foundation in computer science.
+        </p>
+      </div>
+  
+      <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="flex flex-col justify-start px-[50px] transition-all">
-          <h2 className="mb-6 not-italic font-bold text-2xl">System Development and Integration</h2>
+          <h2 className="mb-6 not-italic font-bold text-2xl">
+            System Development and Integration
+          </h2>
           <ul className="text-lg font-normal not-italic list-inside">
             <li>System analysis and design</li>
             <li>Customised software development</li>
@@ -30,7 +27,9 @@ const Services = () => {
           </ul>
         </div>
         <div className="flex flex-col justify-start px-[50px] transition-all">
-          <h2 className="mb-6 not-italic font-bold text-2xl">Data Governance</h2>
+          <h2 className="mb-6 not-italic font-bold text-2xl">
+            Data Governance
+          </h2>
           <ul className="text-lg font-normal not-italic list-inside">
             <li>Data pipeline design and implementation</li>
             <li>Big data design and implementation</li>

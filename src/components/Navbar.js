@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
-import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLinks,
-  NavImg,
-} from "./NavbarElements"
-import Logo from "../../images/nav-logo.png"
+import Logo from "../images/nav-logo.png"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
