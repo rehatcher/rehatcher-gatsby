@@ -16,8 +16,8 @@ export default function CourseList({ data, pageContext }) {
       markdownRemark.frontmatter
 
     return (
-      <div className="flex flex-col justify-center md:flex-row w-full">
-        <div className="order-2 md:order-1 w-full text-left space-y-2">
+      <div className="w-full bg-white overflow-hidden flex flex-col md:flex-row">
+        <div className="order-2 md:order-1 w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
           <h2 className="not-italic font-bold text-2xl no-underline">
             {title}
           </h2>
@@ -32,11 +32,13 @@ export default function CourseList({ data, pageContext }) {
           </button>
         </div>
         {featuredImage && (
-          <div className="w-full h-96 order-1 md:order-2">
+          <div className="order-1 md:order-2 w-full md:w-2/5 h-80">
             <GatsbyImage
               image={featuredImage.childImageSharp.gatsbyImageData}
               alt={title}
-              style={{ height: "384px", width: "50vh"}}
+              objectFit={"cover"}
+              objectPosition={"center"}
+              style={{ height: "100%", width: "100%" }}
             />
           </div>
         )}
@@ -49,10 +51,10 @@ export default function CourseList({ data, pageContext }) {
       <Layout>
         <div
           class="flex justify-center flex-col md:p-[50px] max-w-7xl mx-auto"
-          id="blog"
+          id="course"
         >
           <h1 className="text-5xl p-[50px] not-italic font-normal text-center">
-            Blogs
+            Courses
           </h1>
           <div className="grid grid-cols-1 gap-6 p-6 md:p-0">{all}</div>
           {/* <BlogWrapper>{all}</BlogWrapper> */}
