@@ -16,33 +16,31 @@ export default function BlogList({ data, pageContext }) {
       markdownRemark.frontmatter
 
     return (
-      <div className="flex justify-center">
-        <div className="flex flex-col md:flex-row md:max-w-7xl">
-          <div className="order-2 md:order-1 flex flex-col justify-start">
-            <h2 className="not-italic font-bold text-2xl mb-2 no-underline">
-              {title}
-            </h2>
-            <p className="not-italic font-normal text-lg mt-2 tracking-tight">
-              {blurb}
-            </p>
-            <p className="not-italic font-normal text-lg mt-2 tracking-tight">
-              {date}
-            </p>
-            <button className="text-[#f5862e] hover:text-[#fff] rounded-md border border-[#f5862e] hover:bg-[#f5862e] mt-5 w-20 md:w-40 h-10 md:h-12">
-              <a href={slug}>Read more</a>
-            </button>
-          </div>
-          {featuredImage && (
-            <div className="w-full h-96 md:h-auto object-cover md:w-48">
-              <GatsbyImage
-                image={featuredImage.childImageSharp.gatsbyImageData}
-                alt={title}
-                objectFit={"contain"}
-                style={{ height: "500px", width: "500px" }}
-              />
-            </div>
-          )}
+      <div className="flex flex-col justify-center md:flex-row w-full">
+        <div className="order-2 md:order-1 w-full text-left space-y-2">
+          <h2 className="not-italic font-bold text-2xl no-underline">
+            {title}
+          </h2>
+          <p className="not-italic font-normal text-base tracking-tight">
+            {blurb}
+          </p>
+          <p className="not-italic font-normal text-base tracking-tight">
+            {date}
+          </p>
+          <button className="text-[#f5862e] hover:text-[#fff] border border-[#f5862e] hover:bg-[#f5862e] rounded-md w-20 md:w-40 h-10 md:h-12 text-xs md:text-base">
+            <a href={slug}>Read more</a>
+          </button>
         </div>
+        {featuredImage && (
+          <div className="w-full h-96 order-1 md:order-2">
+            <GatsbyImage
+              image={featuredImage.childImageSharp.gatsbyImageData}
+              alt={title}
+              objectFit={"contain"}
+              style={{ height: "384px" }}
+            />
+          </div>
+        )}
       </div>
     )
   })
@@ -50,11 +48,14 @@ export default function BlogList({ data, pageContext }) {
   return (
     <>
       <Layout>
-        <div class="flex justify-center flex-col md:p-[50px]" id="blog">
+        <div
+          class="flex justify-center flex-col md:p-[50px] max-w-7xl mx-auto"
+          id="blog"
+        >
           <h1 className="text-5xl p-[50px] not-italic font-normal text-center">
             Blogs
           </h1>
-          <div className="grid grid-cols-1 justify-center">{all}</div>
+          <div className="grid grid-cols-1 gap-6 p-6 md:p-0">{all}</div>
           {/* <BlogWrapper>{all}</BlogWrapper> */}
         </div>
         <div className="text-center items-center">
