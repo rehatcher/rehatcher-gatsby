@@ -24,19 +24,28 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex bg-white/[0.8] justify-center fixed w-full h-16 top-0 z-10">
-        <div className="md:flex items-center justify-between w-full px-14">
-          <div className="items-center flex text-2xl">
-            <a href="/#home" className="cursor-pointer">
-              <img
-                src={Logo}
-                alt="Logo"
-                className="h-[45px] w-[150px] object-scale-down"
-              />
-            </a>
+      <nav className="flex fixed bg-white/[0.8] w-full h-16 z-10">
+        <div className="mx-auto w-full">
+          <div className="flex justify-between">
+            <div className="flex ">
+              <div className="items-center text-2xl">
+                <a href="/#home" className="cursor-pointer">
+                  <img
+                    src={Logo}
+                    alt="Logo"
+                    className="h-[45px] w-[150px] object-scale-down"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="md:hidden absolute cursor-pointer ">{click ? <FaTimes /> : <FaBars />}</div>
-          <ul className="flex items-center text-[#f5862e] no-underline">
+        </div>
+
+        {/* <div className="md:flex items-center justify-between w-full px-[50px] py-[10px]">
+          <div className="md:hidden items-center cursor-pointer text-[#f5862e] text-2xl">
+            {click ? <FaTimes /> : <FaBars />}
+          </div>
+          <ul className="flex items-center no-underline text-center text-[#f5862e]">
             <li className="cursor-pointer ml-8 scroll-smooth">
               <a href="/#home">Home</a>
             </li>
@@ -63,46 +72,8 @@ const Navbar = () => {
               <a href="/#contact">Contact</a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </nav>
-      {/* <Nav active={scrollNav} click={click}>
-        <NavbarContainer>
-          <NavLogo to="/#home">
-            <NavImg src={Logo} />
-          </NavLogo>
-          <MobileIcon onClick={handleClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </MobileIcon>
-
-          <NavMenu onClick={handleClick} click={click}>
-            <NavItem>
-              <NavLinks to="/#home">Home</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/#about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/#service">Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/#client">Clients</NavLinks>
-            </NavItem>
-            {DEV_MODE && (
-              <>
-                <NavItem>
-                  <NavLinks to="/blog">Blogs</NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks to="/courses">Courses</NavLinks>
-                </NavItem>
-              </>
-            )}
-            <NavItem>
-              <NavLinks to="/#contact">Contact</NavLinks>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav> */}
     </>
   )
 }

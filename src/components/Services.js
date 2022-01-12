@@ -14,7 +14,7 @@ const Services = () => {
         </p>
       </div>
   
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="block px-[50px]">
           <h2 className="mb-6 not-italic font-bold text-2xl">
             System Development and Integration
