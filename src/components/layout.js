@@ -1,13 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 import Navbar from "./Navbar"
+import Dropdown from "./Dropdown"
 import Footer from "./Footer"
 import CookieConsent from "react-cookie-consent"
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
-      <Navbar />
-
+      <Navbar toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
       <main>{children}</main>
       <Footer />
       <CookieConsent
