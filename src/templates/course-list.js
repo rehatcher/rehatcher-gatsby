@@ -36,7 +36,7 @@ export default function CourseList({ data, pageContext }) {
             <GatsbyImage
               image={featuredImage.childImageSharp.gatsbyImageData}
               alt={title}
-              objectFit={"cover"}
+              objectFit={"contain"}
               objectPosition={"center"}
               style={{ height: "100%", width: "100%" }}
             />
