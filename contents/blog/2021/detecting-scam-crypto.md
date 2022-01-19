@@ -6,6 +6,7 @@ blurb: "Cryptocurrency มีออกมาใหม่ตลอดเวลา
 language: "TH"
 author: "Chayapol Moemeng"
 featuredImage: "./detecting-scam-crypto.png"
+tags: ["crypto", "tech"]
 ---
 ขั้นตอนพื้นฐานในการตรวจว่าเหรียญนั้นตั้งท่าจะ Rug Pull หรือเปล่า
 1. ผู้โปรโมทเหรียญมีความรู้เรื่องเหรียญนั้นหรือเปล่า - บางทีเขาก็ถูกจ้างมาให้พูดถึงเหรียญนั้น

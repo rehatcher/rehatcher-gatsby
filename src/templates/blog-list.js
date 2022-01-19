@@ -38,7 +38,7 @@ export default function BlogList({ data, pageContext }) {
               alt={title}
               objectFit={"contain"}
               objectPosition={"center"}
-              style={{ height: "100%", width:"100%" }}
+              style={{ height: "100%", width: "100%" }}
             />
           </div>
         )}
@@ -58,6 +58,7 @@ export default function BlogList({ data, pageContext }) {
           </h1>
           <div className="grid grid-cols-1 gap-6 p-6 md:p-0">{all}</div>
         </div>
+        
         <div className="text-center items-center">
           {currentPage > 1 && (
             <a href={prevPage} rel="prev">
@@ -91,6 +92,7 @@ export const pageQuery = graphql`
             slug
             title
             blurb
+            tags
             featuredImage {
               childImageSharp {
                 gatsbyImageData(layout: FIXED)
@@ -98,6 +100,10 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+      group(field: frontmatter___tags) {
+        totalCount
+        fieldValue
       }
     }
   }

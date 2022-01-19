@@ -4,6 +4,7 @@ date: "2021-12-30"
 title: "Update Properties ให้ Component อื่น แต่ไม่ Render ค่าใหม่"
 blurb: "Update Properties ให้ Component อื่น แต่ไม่ Render ค่าใหม่"
 featuredImage: "./react-props-update.png"
+tags: ["tech", "dev"]
 ---
 # Problem
 ```

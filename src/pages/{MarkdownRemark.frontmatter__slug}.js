@@ -11,7 +11,7 @@ export default function Template({
     <>
       <Layout>
         <div className="p-[100px] w-full">
-          <div style={{ padding: "0 50px" }}>
+          <div className="px-[50px]">
             <h1 className="text-center text-2xl md:text-4xl font-bold">
               {frontmatter.title}
             </h1>
