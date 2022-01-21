@@ -5,13 +5,14 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function BlogList({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
-  console.log(posts)
+  const tags = data.allMarkdownRemark.group
+  
   const { currentPage, numPages } = pageContext
   const prevPage =
     currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
   const nextPage = "/blog/" + (currentPage + 1).toString()
 
-  const all = posts.map(markdownRemark => {
+  const allPosts = posts.map(markdownRemark => {
     const { date, slug, title, blurb, featuredImage } =
       markdownRemark.frontmatter
 
@@ -46,6 +47,18 @@ export default function BlogList({ data, pageContext }) {
     )
   })
 
+  
+  const allTags = tags.map(markdownRemark => {
+    
+    return (
+      <div>
+        <ul className="cursor-pointer text-center">
+          <li className="py-2">{markdownRemark.fieldValue} [{markdownRemark.totalCount}]</li>
+        </ul>
+      </div>
+    )
+  })
+
   return (
     <>
       <Layout>
@@ -56,9 +69,15 @@ export default function BlogList({ data, pageContext }) {
           <h1 className="text-5xl p-[50px] not-italic font-normal text-center">
             Blogs
           </h1>
-          <div className="grid grid-cols-1 gap-6 p-6 md:p-0">{all}</div>
+          <div className="flex row-span-2">
+            <div className="columns-7xl gap-6 p-6 md:p-0">{allPosts}</div>
+            <div className="columns-xl p-6">
+              <h3 className="text-center font-bold text-xl">Tags</h3>
+              {allTags}
+            </div>
+          </div>
         </div>
-        
+
         <div className="text-center items-center">
           {currentPage > 1 && (
             <a href={prevPage} rel="prev">
