@@ -23,7 +23,9 @@ export default function Template({
             />
           </div>
           <div className="py-5 px-[50px]">
-            <a href="/blog">Back to blog list</a>
+            <button className="text-[#f5862e] hover:text-[#fff] border border-[#f5862e] hover:bg-[#f5862e] rounded-md w-20 md:w-40 h-10 md:h-12 text-xs md:text-base">
+              <a href="/blog">Back to blog list</a>
+            </button>
           </div>
         </div>
       </Layout>

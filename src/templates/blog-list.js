@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export default function BlogList({ data, pageContext }) {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node)
   const tags = data.allMarkdownRemark.group
-  
+
   const { currentPage, numPages } = pageContext
   const prevPage =
     currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
@@ -47,13 +47,15 @@ export default function BlogList({ data, pageContext }) {
     )
   })
 
-  
   const allTags = tags.map(markdownRemark => {
-    
     return (
       <div>
         <ul className="cursor-pointer text-center">
-          <li className="py-2">{markdownRemark.fieldValue} [{markdownRemark.totalCount}]</li>
+          <li className="py-2">
+            <a href={`/blog/tags/${markdownRemark.fieldValue}`}>
+              {markdownRemark.fieldValue} [{markdownRemark.totalCount}]
+            </a>
+          </li>
         </ul>
       </div>
     )
@@ -63,7 +65,7 @@ export default function BlogList({ data, pageContext }) {
     <>
       <Layout>
         <div
-          class="flex justify-center flex-col md:p-[50px] max-w-7xl mx-auto"
+          className="flex justify-center flex-col md:p-[50px] max-w-7xl mx-auto"
           id="blog"
         >
           <h1 className="text-5xl p-[50px] not-italic font-normal text-center">
@@ -71,7 +73,7 @@ export default function BlogList({ data, pageContext }) {
           </h1>
           <div className="flex row-span-2">
             <div className="columns-7xl gap-6 p-6 md:p-0">{allPosts}</div>
-            <div className="columns-xl p-6">
+            <div className="columns-3xs p-6">
               <h3 className="text-center font-bold text-xl">Tags</h3>
               {allTags}
             </div>
