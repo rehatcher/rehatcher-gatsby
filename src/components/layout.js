@@ -2,10 +2,15 @@ import React from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import CookieConsent from "react-cookie-consent"
+import { Helmet } from "react-helmet"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>REHATCHER</title>
+      </Helmet>
       <Navbar />
       <main>{children}</main>
       <Footer />
@@ -26,5 +31,3 @@ const Layout = ({ children }) => {
     </>
   )
 }
-
-export default Layout

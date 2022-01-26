@@ -9,8 +9,10 @@ module.exports = {
     including training employees with a team with over 20 years of
     experience.`,
     author: `REHATCHER`,
+    copyright: `This website is copyrite 2021 REHATCHER`
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-postcss',
     {
