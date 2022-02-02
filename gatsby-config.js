@@ -76,8 +76,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `locales`,
         path: `${__dirname}/locales`,
+        name: `locale`,
       },
     },
     `gatsby-transformer-remark`,
@@ -106,7 +106,22 @@ module.exports = {
       options: {
         localeJsonSourceName: `locale`,
         languages: [`en`, `th`],
-      }
+        defaultLanguage: `en`,
+        siteUrl: `http://localhost:8000/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: "/:lang?/",
+            getLanguageFromPath: true,
+          },
+        ],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
