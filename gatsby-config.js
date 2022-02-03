@@ -9,12 +9,12 @@ module.exports = {
     including training employees with a team with over 20 years of
     experience.`,
     author: `REHATCHER`,
-    copyright: `This website is copyrite 2021 REHATCHER`
+    copyright: `This website is copyrite 2021 REHATCHER`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -72,7 +72,14 @@ module.exports = {
         name: `courses`,
         path: `${__dirname}/contents/courses`,
       },
-    },    
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -95,29 +102,29 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gdpr-cookies`,
+      resolve: `gatsby-plugin-react-i18next`,
       options: {
-        googleAnalytics: {
-          // trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID', // leave empty if you want to disable the tracker
-          cookieName: "gatsby-gdpr-google-analytics", // default
-          anonymize: true, // default
-          allowAdFeatures: false, // default
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `th`],
+        defaultLanguage: `en`,
+        siteUrl: `http://localhost:8000/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
         },
-        googleTagManager: {
-          // trackingId: 'YOUR_GOOGLE_TAG_MANAGER_TRACKING_ID', // leave empty if you want to disable the tracker
-          cookieName: "gatsby-gdpr-google-tagmanager", // default
-          dataLayerName: "dataLayer", // default
-        },
-        facebookPixel: {
-          // pixelId: 'YOUR_FACEBOOK_PIXEL_ID', // leave empty if you want to disable the tracker
-          cookieName: "gatsby-gdpr-facebook-pixel", // default
-        },
-        tikTokPixel: {
-          // pixelId: 'YOUR_TIKTOK_PIXEL_ID', // leave empty if you want to disable the tracker
-          cookieName: "gatsby-gdpr-tiktok-pixel", // default
-        },
-        // defines the environments where the tracking should be available  - default is ["production"]
-        environments: ["production", "development"],
+        pages: [
+          {
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: true,
+          },
+          {
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

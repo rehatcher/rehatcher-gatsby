@@ -12,11 +12,7 @@ function Client() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-4 p-[20px] md:py-[50px]">
         <div className="flex flex-col justify-center items-center p-8">
-          <img
-            className="object-contain h-14 md:h-16"
-            alt=""
-            src={dastaLogo}
-          />
+          <img className="object-contain h-14 md:h-16" alt="" src={dastaLogo} />
         </div>
         <div className="flex flex-col justify-center items-center p-8">
           <img
@@ -26,11 +22,7 @@ function Client() {
           />
         </div>
         <div className="flex flex-col justify-center items-center p-8">
-          <img
-            className="object-contain md:h-20 h-24"
-            alt=""
-            src={cysecLogo}
-          />
+          <img className="object-contain md:h-20 h-24" alt="" src={cysecLogo} />
         </div>
         <div className="flex flex-col justify-center items-center p-8">
           <img

@@ -10,10 +10,7 @@ const Navbar = () => {
     <>
       <nav className="bg-white/[0.8] flex fixed items-center justify-center w-full h-16 top-0 md:px-[100px] text-[#f5862e] z-10">
         <div className="flex justify-between w-full">
-          <a
-            href="/#home"
-            className="flex cursor-pointer px-[50px] md:px-0"
-          >
+          <a href="/#home" className="flex cursor-pointer px-[50px] md:px-0">
             <img src={Logo} alt="Logo" className="h-[40px] object-scale-down" />
           </a>
 
@@ -30,29 +27,43 @@ const Navbar = () => {
             }`}
           >
             <li className="h-7 md:ml-8">
-              <a href="/#home" className="flex h-full items-center">Home</a>
+              <a href="/#home" className="flex h-full items-center">
+                Home
+              </a>
             </li>
             <li className="h-7 md:ml-8">
-              <a href="/#about" className="flex h-full items-center">About</a>
+              <a href="/#about" className="flex h-full items-center">
+                About
+              </a>
             </li>
             <li className="h-7 md:ml-8">
-              <a href="/#service" className="flex h-full items-center">Services</a>
+              <a href="/#service" className="flex h-full items-center">
+                Services
+              </a>
             </li>
             <li className="h-7 md:ml-8">
-              <a href="/#client" className="flex h-full items-center">Clients</a>
+              <a href="/#client" className="flex h-full items-center">
+                Clients
+              </a>
             </li>
             {DEV_MODE && (
               <>
                 <li className="h-7 md:ml-8">
-                  <a href="/blog" className="flex h-full items-center">Blogs</a>
+                  <a href="/blog" className="flex h-full items-center">
+                    Blogs
+                  </a>
                 </li>
                 <li className="h-7 md:ml-8">
-                  <a href="/courses" className="flex h-full items-center">Courses</a>
+                  <a href="/courses" className="flex h-full items-center">
+                    Courses
+                  </a>
                 </li>
               </>
             )}
             <li className="h-7 md:ml-8">
-              <a href="/#contact" className="flex h-full items-center">Contact</a>
+              <a href="/#contact" className="flex h-full items-center">
+                Contact
+              </a>
             </li>
           </ul>
         </div>

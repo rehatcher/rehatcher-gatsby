@@ -4,16 +4,14 @@ const Services = () => {
   return (
     <div className="flex justify-center flex-col md:p-[50px]" id="service">
       <div className="font-normal not-italic p-[50px]">
-        <h1 className="text-5xl">
-          Our Services
-        </h1>
+        <h1 className="text-5xl">Our Services</h1>
         <p className="text-lg mt-[50px]">
           REHATCHER's expertise includes system development and integration,
           data governance, and training. Our teams have experiences in digital
           technology consulting and strong foundation in computer science.
         </p>
       </div>
-  
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="block px-[50px]">
           <h2 className="mb-6 not-italic font-bold text-2xl">
