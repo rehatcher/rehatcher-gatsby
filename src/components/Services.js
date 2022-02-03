@@ -1,10 +1,14 @@
 import React from "react"
 
+import { Trans } from "gatsby-plugin-react-i18next"
+
 const Services = () => {
   return (
     <div className="flex justify-center flex-col md:p-[50px]" id="service">
       <div className="font-normal not-italic p-[50px]">
-        <h1 className="text-5xl">Our Services</h1>
+        <h1 className="text-5xl">          
+          <Trans>Our Service</Trans>
+          </h1>
         <p className="text-lg mt-[50px]">
           REHATCHER's expertise includes system development and integration,
           data governance, and training. Our teams have experiences in digital
@@ -48,3 +52,17 @@ const Services = () => {
 }
 
 export default Services
+
+// export const query = graphql`
+//   query ($language: String!) {
+//     locales: allLocale(filter: { language: { eq: $language } }) {
+//       edges {
+//         node {
+//           ns
+//           data
+//           language
+//         }
+//       }
+//     }
+//   }
+// `

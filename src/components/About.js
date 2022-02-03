@@ -1,5 +1,6 @@
 import React from "react"
 import aboutImg from "../images/about-logo.gif"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const About = () => {
   return (
@@ -9,15 +10,19 @@ const About = () => {
           <img className="w-full" alt="" src={aboutImg} />
         </div>
         <div className="flex flex-col justify-start p-[50px] md:p-[50px]">
-          <h1 className="text-2xl not-italic font-bold">About Us</h1>
+          <h1 className="text-2xl not-italic font-bold">
+            <Trans>About Us</Trans>
+          </h1>
           <p className="text-lg py-6 text-justify">
-            Businesses are competing with other players, but now the competition
-            involves players from different domains. Technology makes the world
-            smaller, and staying still is stepping backward.{" "}
-            <i>Your business needs to be digitised.</i> Digitisation is not
-            about being trendy with tech but helps cut costs, ignore geolocation
-            limits, and reach more customers. Let us help you stay ahead of the
-            competition.
+            <Trans>
+              Businesses are competing with other players, but now the
+              competition involves players from different domains. Technology
+              makes the world smaller, and staying still is stepping backward. 
+              <i>Your business needs to be digitised.</i> Digitisation is not
+              about being trendy with tech but helps cut costs, ignore
+              geolocation limits, and reach more customers. Let us help you stay
+              ahead of the competition.
+            </Trans>
           </p>
         </div>
       </div>
