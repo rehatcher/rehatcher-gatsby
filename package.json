@@ -3,11 +3,7 @@
   "private": true,
   "license": "UNLICENSED",
   "description": "Main Rehatcher website 2022",
-<<<<<<< HEAD
-  "version": "0.1.4",
-=======
   "version": "0.1.5",
->>>>>>> b14e12d05a6b2bf6d23b573e1b1a5555afe5003e
   "author": "Rehatcher",
   "dependencies": {
     "autoprefixer": "^10.4.1",
