@@ -1,5 +1,6 @@
 import React from "react"
 import HomeBanner from "../images/home-banner.png"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 function Home() {
   return (
@@ -11,7 +12,9 @@ function Home() {
           </h1>
 
           <button className="bg-[#f5862e] text-[#fff] hover:bg-[#fff] hover:text-[#f5862e] border hover:border-[#f5862e] text-xs md:text-xl w-20 md:w-48 h-10 md:h-14 rounded-md mt-5 scroll-smooth">
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">
+              <Trans>Contact Us</Trans>
+            </a>
           </button>
         </div>
 
